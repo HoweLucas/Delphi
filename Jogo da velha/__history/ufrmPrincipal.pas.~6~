@@ -1,0 +1,249 @@
+unit ufrmPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, FMX.TabControl, FMX.Effects;
+
+type
+  TForm1 = class(TForm)
+    TabControl1: TTabControl;
+    TabItem1: TTabItem;
+    TabItem2: TTabItem;
+    Layout1: TLayout;
+    rect_fundo_tab1: TRectangle;
+    lyt_tab1: TLayout;
+    Image1: TImage;
+    lyt_jogadores: TLayout;
+    rect_morango: TRectangle;
+    img_morango: TImage;
+    FlowLayout1: TFlowLayout;
+    rect_banana: TRectangle;
+    img_banana: TImage;
+    Layout2: TLayout;
+    rect_deu_velha: TRectangle;
+    rect_game_over: TRectangle;
+    rect_parabens: TRectangle;
+    rect_fundo_tab2: TRectangle;
+    lyt_tab2: TLayout;
+    Image2: TImage;
+    Layout3: TLayout;
+    FlowLayout2: TFlowLayout;
+    rect_1_1: TRectangle;
+    rect_1_2: TRectangle;
+    rect_1_3: TRectangle;
+    rect_2_1: TRectangle;
+    rect_2_2: TRectangle;
+    Rect_2_3: TRectangle;
+    rect_3_1: TRectangle;
+    rect_3_2: TRectangle;
+    Rect_3_3: TRectangle;
+    ShadowEffect1: TShadowEffect;
+    img_1_1: TImage;
+    img_1_2: TImage;
+    img_1_3: TImage;
+    img_2_1: TImage;
+    img_2_2: TImage;
+    img_3_1: TImage;
+    img_2_3: TImage;
+    img_3_2: TImage;
+    img_3_3: TImage;
+    img_jogador: TImage;
+    img_computador: TImage;
+    rect_fim_jogo: TRectangle;
+    rect_progresso: TRectangle;
+    procedure FormShow(Sender: TObject);
+    procedure OnClickSelecioneJogador(sender: Tobject);
+    procedure OnClickJogador(Sender : Tobject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+
+  private
+    { Private declarations }
+    FJogoVelha : TJogovelha;
+
+    procedure MarcarJogadaComputador(const aCoordenadas: String);
+    procedure ReiniciarJogo;
+    procedure AnimarFimJogo(const aRetangulo: Trectangle);
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm1.AnimarFimJogo(const aRetangulo: Trectangle);
+begin
+  rect_fim_jogo.Visible := True;
+  rect_Progresso.Width  := 20;
+
+  aRetangulo.Opacity := 0;
+  aretangulo.Visible := True;
+
+  TThread.CreateAnonymousThread(procedure
+  begin
+    TThread.Synchronize(nil, procedure
+    begin
+      aRetangulo.AnimateFloat('Opacity1', 1, 0.3);
+    end);
+  end).Start;
+
+  TThread.CreateAnonymousThread(procedure
+  begin
+    Sleep(450);
+
+    while rect_progresso.Width < rect_fim_jogo.Width do
+    begin
+      TThread.Synchronize(nil, procedure
+        begin
+          rect_progresso.AnimateFloat('width', rect_progresso.Width + 50, 0.3);
+        end);
+
+      sleep(150);
+    end;
+
+    TThread.Synchronize(nil, procedure
+    begin
+      aRetangulo.Visible := False;
+      rect_fim_jogo.Visible := False;
+
+      Self.ReiniciarJogo;
+    end);
+  end).Start;
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FJogoVelha.DisposeOf;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  FJogoVelha := TJogoVelha.Create;
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  TabControl1.TabPosition := TTabposition.None;
+  TabControl1.ActiveTab   := TabItem1;
+end;
+
+procedure TForm1.MarcarJogadaComputador(const aCoordenadas: String);
+var
+  xLinha: Byte;
+  xColuna: Byte;
+  xRetangulo: TRectangle;
+  xImagem: TImage;
+begin
+  xLinha  := StrToInt(Copy(aCoordenadas, 1, 1));
+  xColuna := StrToInt(Copy(aCoordenadas, 3, 1));
+
+  FJogoVelha.realizarJogada(TJogador.tpCpu,
+                                     xLinha,
+                                     xColuna);
+
+  xRetangulo := TRectangle(FindComponent('rect_' + aCoordenadas));
+
+  if Assigned(xRetangulo) then
+  begin
+    xImagem := Timage(FindComponent('img_'+aCoordenadas));
+    xImagem.Bitmap := img_computador.Bitmap;
+    xImagem.Visible := true;
+
+    xRetangulo.HitTest := False;
+  end;
+end;
+
+procedure TForm1.OnClickSelecioneJogador(sender: Tobject);
+var
+  xPosicao : Integer;
+  xRetangulo: String;
+  xJogador: String;
+  begin
+    TabControl1.ActiveTab := TabItem2;
+
+    xRetangulo := (Sender as TRectangle).name;
+    xPosicao   := Pos('_', xRetangulo);
+    xJogador   := Copy(xRetangulo, xPosicao +1, Length(xretangulo));
+
+    if xJogador = 'morango' then
+    begin
+      img_jogador.Bitmap    := img_morango.Bitmap;
+      img_computador.Bitmap := img_banana.Bitmap;
+    end
+    else //banana
+    begin
+      img_jogador.Bitmap    := img_banana.Bitmap;
+      img_computador.Bitmap := img_morango.bitmap;
+    end;
+  end;
+
+procedure TForm1.ReiniciarJogo;
+var
+  I: Integer;
+begin
+  TabControl1.ActiveTab := TabItem1;
+
+  for I := 0 to Pred(Self.ComponentCount) do
+  begin
+    if (self.Components[I] is TRectangle) and (Self.Components[I].Tag > 0) then
+      TRectangle(self.Components[I]).HitTest := true;
+
+    if (Self.Components[I] is TImage) and (self.Components[I].Tag > 0) then
+      TImage(Self.Components[I]).Bitmap := nil;
+  end;
+end;
+
+procedure TForm1.OnClickJogador(Sender : Tobject);
+var
+  xPosicao: Integer;
+  xCoordenadas: String;
+  xLinha: Byte;
+  xColuna: Byte;
+  xRetangulo: TRectangle;
+  xImagem: TImage;
+  begin
+    xRetangulo := (Sender as TRectangle);
+
+    xPosicao  := Pos('_', xRetangulo.name);
+    xCoordenadas := Copy(xretangulo.name, xPosicao + 1, Length(xRetangulo.Name));
+
+    xLinha  := StrToInt(copy(xCoordenadas, 1, 1));
+    xColuna := StrToInt(Copy(xCoordenadas, 3, 1));
+
+    FjogoVelha.RealizarJogada(TJogador.tpPlayer1, xLinha, xColuna);
+
+    xImagem            := TImage(FindComponent('img_' + xCoordenadas));
+    ximagem.Bitmap     := img_Jogador.Bitmap;
+    xImagem.Visible    := True;
+    xretangulo.HitTest := False;
+
+    FJogoVelha.verificarFimDoJogo(TJogador.tpjogador.tpPlayer1);
+
+    if (not FJogoVelha.FimJogo) and (FjogoVelha.Jogadas < 5) then
+    begin
+      xCoordenadas := FJogovelha.JogadorComputador;
+      self.MarcarJogadaComputador(xCoordenadas);
+
+      FJogoVelha.verificarFimDoJogo(TJogador.tpCpu);
+
+      if  Fjogovelha.FimJogo then
+        Self.AnimarFimJogo(rect_game_over);
+    end
+    else
+    begin
+      if (Fjogovelha.Jogadas <5) or (FJogoVelha.FimJogo) then
+        Self.AnimarFimJogo(rect_parabens);
+      else
+        Self.AnimarFimJogo(rect_deu_Velha);
+    end;
+
+
+  end;
+end.

@@ -1,0 +1,130 @@
+unit ufrmPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, FMX.TabControl, FMX.Effects;
+
+type
+  TForm1 = class(TForm)
+    TabControl1: TTabControl;
+    TabItem1: TTabItem;
+    TabItem2: TTabItem;
+    Layout1: TLayout;
+    rect_fundo_tab1: TRectangle;
+    lyt_tab1: TLayout;
+    Image1: TImage;
+    lyt_jogadores: TLayout;
+    rect_morango: TRectangle;
+    img_morango: TImage;
+    FlowLayout1: TFlowLayout;
+    rect_banana: TRectangle;
+    img_banana: TImage;
+    Layout2: TLayout;
+    rect_deu_velha: TRectangle;
+    rect_game_over: TRectangle;
+    rect_parabens: TRectangle;
+    rect_fundo_tab2: TRectangle;
+    lyt_tab2: TLayout;
+    Image2: TImage;
+    Layout3: TLayout;
+    FlowLayout2: TFlowLayout;
+    rect_1_1: TRectangle;
+    rect_1_2: TRectangle;
+    rect_1_3: TRectangle;
+    rect_2_1: TRectangle;
+    rect_2_2: TRectangle;
+    Rect_2_3: TRectangle;
+    rect_3_1: TRectangle;
+    rect_3_2: TRectangle;
+    Rect_3_3: TRectangle;
+    ShadowEffect1: TShadowEffect;
+    img_1_1: TImage;
+    img_1_2: TImage;
+    img_1_3: TImage;
+    img_2_1: TImage;
+    img_2_2: TImage;
+    img_3_1: TImage;
+    img_2_3: TImage;
+    img_3_2: TImage;
+    img_3_3: TImage;
+    img_jogador: TImage;
+    img_computador: TImage;
+    rect_fim_jogo: TRectangle;
+    rect_progresso: TRectangle;
+    procedure FormShow(Sender: TObject);
+    procedure OnClickSelecioneJogador(sender: Tobject);
+    procedure OnClickJogador(Sender : Tobject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  TabControl1.TabPosition := TTabposition.None;
+  TabControl1.ActiveTab   := TabItem1;
+end;
+
+procedure TForm1.OnClickSelecioneJogador(sender: Tobject);
+var
+  xPosicao : Integer;
+  xRetangulo: String;
+  xJogador: String;
+  begin
+    TabControl1.ActiveTab := TabItem2;
+
+    xRetangulo := (Sender as TRectangle).name;
+    xPosicao   := Pos('_', xRetangulo);
+    xJogador   := Copy(xRetangulo, xPosicao +1, Length(xretangulo));
+
+    if xJogador = 'morango' then
+    begin
+      img_jogador.Bitmap    := img_morango.Bitmap;
+      img_computador.Bitmap := img_banana.Bitmap;
+    end
+    else //banana
+    begin
+      img_jogador.Bitmap    := img_banana.Bitmap;
+      img_computador.Bitmap := img_morango.bitmap;
+    end;
+  end;
+
+procedure TForm1.OnClickJogador(Sender : Tobject);
+var
+  xPosicao: Integer;
+  xCoordenadas: String;
+  xLinha: Byte;
+  xColuna: Byte;
+  xRetangulo: TRectangle;
+  xImagem: TImage;
+  begin
+    xRetangulo := (Sender as TRectangle);
+
+    xPosicao  := Pos('_', xRetangulo.name);
+    xCoordenadas := Copy(xretangulo.name, xPosicao + 1, Length(xRetangulo.Name));
+
+    xLinha  := StrToInt(copy(xCoordenadas, 1, 1));
+    xColuna := StrToInt(Copy(xCoordenadas, 3, 1));
+
+    {FjogoVelha.RealizarJogada(TJogador.tpPlayer1,
+                              xLinha,
+                              xColuna);}
+
+    xImagem            := TImage(FindComponent('img_' + xCoordenadas));
+    ximagem.Bitmap     := img_Jogador.Bitmap;
+    xImagem.Visible    := True;
+    xretangulo.HitTest := False;
+  end;
+end.

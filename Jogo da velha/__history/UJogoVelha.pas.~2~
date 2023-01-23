@@ -1,0 +1,107 @@
+unit UJogoVelha;
+
+interface
+
+type
+  TJogador    = (tpPlayer1 = 1, tpCpu);
+  TMinhaLinha = array[1..3] of byte;
+
+  TJogoVelha  = class
+    private
+      FFimJogo: Boolean;
+      FJogadas: Byte;
+
+      FPrimeiraLinha: TMinhaLinha;
+      FSegundaLinha: TMinhaLinha;
+      FTerceiraLinha: TMinhaLinha;
+
+      FPrimeiraColuna: TMinhaLinha;
+      FSegundaColuna: TMinhaLinha;
+      FTerceiraColuna: TMinhalinha;
+
+      FPrimeiraDiagonal: TminhaLinha;
+      FSegundaDiagonal: TMinhaLinha;
+
+      function GetFimJogo: Boolean;
+      function GetJogadas: Byte;
+
+      procedure SetFimJogo(const Value: Boolean);
+      procedure SetJogadas(Const Value: Byte);
+
+      procedure VerificarFimDoJogo(Const aJogador: TJogador;
+        const aLinha: TMinhaLinha); overload;
+    public
+      constructor Create;
+
+      procedure ReiniciarJogo;
+      procedure RealizarJogada(Const aJogador: TJogador; const aLinha, aColuna: Byte);
+      procedure VerificarFimDoJogo(const aJogador: TJogador); overload;
+
+      function JogadaComputador: String;
+
+      property Jogadas: Byte    read GetJogadas write SetJogadas;
+      property FimJogo: Boolean read GetFimJogo write SetFimJogo;
+end;
+
+implementation
+
+uses
+  SysUtils;
+
+{ TJogoVelha }
+
+constructor TJogoVelha.Create;
+begin
+  FJogadas := 0;
+end;
+
+function TJogoVelha.GetFimJogo: Boolean;
+begin
+
+end;
+
+function TJogoVelha.GetJogadas: Byte;
+begin
+
+end;
+
+function TJogoVelha.JogadaComputador: String;
+begin
+
+end;
+
+procedure TJogoVelha.RealizarJogada(const aJogador: TJogador; const aLinha,
+  aColuna: Byte);
+begin
+
+end;
+
+procedure TJogoVelha.ReiniciarJogo;
+begin
+
+end;
+
+procedure TJogoVelha.SetFimJogo(const Value: Boolean);
+begin
+
+end;
+
+procedure TJogoVelha.SetJogadas(const Value: Byte);
+begin
+
+end;
+
+procedure TJogoVelha.VerificarFimDoJogo(const aJogador: TJogador);
+begin
+  Self.VerificarFimDoJogo(aJogador, FPrimeiraLinha);
+  Self.VerificarFimDoJogo(aJogador, FSegundaLinha);
+  Self.VerificarFimDoJogo(aJogador, FTerceiraLinha);
+end;
+
+procedure TJogoVelha.VerificarFimDoJogo(const aJogador: TJogador;
+  const aLinha: TMinhaLinha);
+begin
+
+end;
+
+end.

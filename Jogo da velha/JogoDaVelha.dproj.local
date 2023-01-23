@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/12/19 19:06:02.000.751,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/19 20:25:22.000.704,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\mysql\Documents\Jogo da velha\ufrmPrincipal.fmx</Transaction>
+    <Transaction>2022/12/19 20:25:22.000.704,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\mysql\Documents\Jogo da velha\ufrmPrincipal.pas</Transaction>
+    <Transaction>2022/12/19 20:25:31.000.600,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mysql\Documents\Jogo da velha\JogoDaVelha.dproj</Transaction>
+    <Transaction>2022/12/20 18:31:31.000.639,=C:\Users\mysql\Documents\Jogo da velha\Unit1.pas</Transaction>
+    <Transaction>2022/12/20 18:31:49.000.303,C:\Users\mysql\Documents\Jogo da velha\Unit1.pas=C:\Users\mysql\Documents\Jogo da velha\UJogoVelha.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>
