@@ -1,0 +1,84 @@
+object frmRelPedidos: TfrmRelPedidos
+  Left = 0
+  Top = 0
+  Caption = 'Relat'#243'rio - Pedidos'
+  ClientHeight = 199
+  ClientWidth = 553
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 337
+    Height = 177
+    Caption = 'Filtros'
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Top = 24
+      Width = 53
+      Height = 13
+      Caption = 'Comprador'
+    end
+    object Label2: TLabel
+      Left = 8
+      Top = 80
+      Width = 55
+      Height = 13
+      Caption = 'Fornecedor'
+    end
+    object btnExportar: TButton
+      Left = 152
+      Top = 141
+      Width = 75
+      Height = 25
+      Caption = 'Exportar'
+      TabOrder = 0
+    end
+    object btnVisualizar: TButton
+      Left = 238
+      Top = 141
+      Width = 75
+      Height = 25
+      Caption = 'Visualizar'
+      TabOrder = 1
+    end
+    object DBLookupComprador: TDBLookupComboBox
+      Left = 8
+      Top = 43
+      Width = 305
+      Height = 21
+      TabOrder = 2
+    end
+    object DBLookupFornecedor: TDBLookupComboBox
+      Left = 8
+      Top = 99
+      Width = 305
+      Height = 21
+      TabOrder = 3
+    end
+  end
+  object dtsLookupComprador: TDataSource
+    Left = 384
+    Top = 24
+  end
+  object dtsFornecedor: TDataSource
+    Left = 384
+    Top = 88
+  end
+  object LookupComprador: TFDTable
+    Left = 480
+    Top = 24
+  end
+  object LookupFornecedor: TFDTable
+    Left = 480
+    Top = 88
+  end
+end
