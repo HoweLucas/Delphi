@@ -1,0 +1,83 @@
+unit ufrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, System.Generics.Collections;
+
+type
+  TPessoa = Record
+    CPF  : String;
+    Nome : String;
+
+  end;
+  TForm1 = class(TForm)
+    btnAdd: TButton;
+    btnTryGetValue: TButton;
+    btnRemove: TButton;
+    btnTrimExcess: TButton;
+    btnContainsKey: TButton;
+    btnAddOrSetValue: TButton;
+    btnListaKey: TButton;
+    btnListaValue: TButton;
+    btnClear: TButton;
+    btnOnKeyNotify: TButton;
+    btnOnValueNotify: TButton;
+    CPF: TLabel;
+    edtCpf: TEdit;
+    Nome: TLabel;
+    edtNome: TEdit;
+    Memo1: TMemo;
+    procedure btnAddClick(Sender: TObject);
+    procedure btnClearClick(Sender: TObject);
+  private
+    { Private declarations }
+    FDicionario : TDictionary<String, TPessoa>;
+
+    procedure KeyNotify(Sender: TObject; const aItem: String;
+      aAction: TCollectionNotification);
+    procedure ValueNotify(Sender: TObject; const aItem: TPessoa;
+      aAction: TCollectionNotification);
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm1 }
+
+procedure TForm1.btnAddClick(Sender: TObject);
+var
+  xPessoa: TPessoa;
+begin
+  xPessoa.CPF  := edtCPF.Text;
+  xPessoa.Nome := edtNome.Text;
+
+  //Atualizar
+  FDicionario.Add(XPessoa.CPF, xPessoa);
+end;
+
+procedure TForm1.btnClearClick(Sender: TObject);
+begin
+  FDicionario.Clear;
+end;
+
+procedure TForm1.KeyNotify(Sender: TObject; const aItem: String;
+  aAction: TCollectionNotification);
+begin
+
+end;
+
+procedure TForm1.ValueNotify(Sender: TObject; const aItem: TPessoa;
+  aAction: TCollectionNotification);
+begin
+
+end;
+
+end.

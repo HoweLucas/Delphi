@@ -1,0 +1,91 @@
+unit UPaciente;
+
+interface
+uses Sysutils, System.Generics.Collections;
+
+type
+ TPaciente = Class
+
+
+private
+  FCPF           : String;
+  FNome          : String;
+  FEspecialidade : String;
+
+//Function
+  function GetCPF: String;
+  function GetEspecialidade: String;
+  function GetNome: String;
+
+//Procedure
+  procedure SetCPF(const Value: String);
+  procedure SetEspecialidade(const Value: String);
+  procedure SetNome(const Value: String);
+
+public
+//Property
+  Property NomePaciente : String read GetNome write SetNome;
+  Property CPfPaciente  : String read GetCPF  write SetCPF;
+  property EspecialidadePaciente : String read GetEspecialidade write SetEspecialidade;
+End;
+
+//Classe TQueue
+  TFilaPessoa = class
+   FPessoa: TQueue<TPaciente>;
+private
+
+public
+  Function Adicionar(aPaciente:TPaciente):String;
+  Function Proximo: TPaciente;
+  end;
+
+
+implementation
+
+{ TPaciente }
+
+function TPaciente.GetCPF: String;
+begin
+  Result := FCPF;
+end;
+
+function TPaciente.GetEspecialidade: String;
+begin
+  Result := FEspecialidade;
+end;
+
+function TPaciente.GetNome: String;
+begin
+  Result := FNome
+end;
+
+procedure TPaciente.SetCPF(const Value: String);
+begin
+  FCPF := Value;
+end;
+
+procedure TPaciente.SetEspecialidade(const Value: String);
+begin
+  FEspecialidade := value;
+end;
+
+procedure TPaciente.SetNome(const Value: String);
+begin
+  FNome := Value;
+end;
+
+{ TFilaPessoa }
+
+function TFilaPessoa.Adicionar(aPaciente: TPaciente): String;
+begin
+  Fpessoa.Enqueue(aPaciente);
+end;
+
+function TFilaPessoa.Proximo: TPaciente;
+var
+  xFila: Tpaciente;
+begin
+  xFila := TPaciente.Create;
+end;
+
+end.

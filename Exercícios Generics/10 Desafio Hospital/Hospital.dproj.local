@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:34:06.000.379,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/18 19:36:36.000.974,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/18 19:37:18.000.026,C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\ufrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/18 19:37:18.000.026,C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\ufrmPrincipal.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/01/18 19:37:22.000.006,C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\Hospital.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/01/18 19:37:35.000.496,=C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\Unit1.pas</Transaction>
+    <Transaction>2023/01/18 19:50:17.000.612,C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\TPaciente.pas=C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\Unit1.pas</Transaction>
+    <Transaction>2023/01/18 19:58:31.000.460,C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\UPaciente.pas=C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\TPaciente.pas</Transaction>
+    <Transaction>2023/01/18 20:17:10.000.478,=C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\Unit1.pas</Transaction>
+    <Transaction>2023/01/18 20:17:18.000.116,C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\uPessoa.pas=C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\Unit1.pas</Transaction>
+    <Transaction>2023/01/18 20:21:26.000.825,C:\Users\mysql\Documents\Exercícios Generics\10 Desafio Hospital\uPessoa.pas=</Transaction>
+  </Transactions>
+</BorlandProject>
