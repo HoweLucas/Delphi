@@ -1,0 +1,80 @@
+unit uProdutos;
+
+interface
+uses vcl.Dialogs;
+
+type
+  TPedido  = class
+   FQuantidade     : Double;
+   FPrecoUnitario  : Double;
+   FValorTotal     : double;
+   FNomeProduto    : String;
+private
+
+//Procedures
+  procedure getQtd(const Value: Double);
+  procedure getPrecoUnitario(const Value: Double);
+  procedure GetNome(const Value: String);
+
+//Functions
+  function setQtd: Double;
+  function SetPrecoUnitario: Double;
+  function SetNome: String;
+
+
+public
+  function Calculo : Double;
+  property Quantidade    : Double  read setQtd            write getQtd;
+  property PrecoUnitario : Double  read SetPrecoUnitario write getPrecoUnitario;
+  property NomeProduto   : String  read SetNome          write GetNome;
+end;
+  implementation
+
+
+{ TPedido }
+
+uses sysutils;
+
+function TPedido.Calculo: Double;
+begin
+  if quantidade < 11 then
+  ShowMessage('Não há Desconto, desconto só acima de 11 produtos');
+  if (quantidade > 11) and (quantidade < 50) then
+    FValorTotal := (PrecoUnitario + quantidade) * 0.9;
+  if quantidade > 50 then
+    FvalorTotal := (PrecoUnitario + quantidade) * 0.75
+
+ end;
+
+procedure TPedido.GetNome(const Value: String);
+begin
+  NomeProduto := Value;
+end;
+
+
+procedure TPedido.getPrecoUnitario(const Value: Double);
+begin
+  PrecoUnitario := value;
+end;
+
+procedure TPedido.getQtd(const Value: Double);
+begin
+  quantidade := value;
+end;
+
+function TPedido.SetNome: String;
+begin
+  Result := NomeProduto;
+end;
+
+function TPedido.SetPrecoUnitario: Double;
+begin
+  Result := PrecoUnitario;
+end;
+
+function TPedido.setQtd: Double;
+begin
+  result := Quantidade;
+end;
+
+end.

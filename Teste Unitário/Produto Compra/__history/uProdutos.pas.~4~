@@ -1,0 +1,88 @@
+unit uProdutos;
+
+interface
+
+
+type
+  TPedido  = class
+   FQuantidade     : double;
+   FPreçoUnitario  : double;
+   FValorTotal     : double;
+   FNomeProduto    : String;
+private
+
+//Procedures
+  procedure getQtd(const Value: Integer);
+  procedure getPreçoUnitario(const Value: Double);
+  procedure GetValorTotal(const Value: Integer);
+  procedure GetNome(const Value: String);
+
+//Functions
+  function setQtd: Integer;
+  function SetPreçoUnitario: Double;
+  function SetValorTotal: Integer;
+  function SetNome: String;
+
+
+public
+  property Quantidade    : Integer read setQtd           write getQtd;
+  property PreçoUnitario : Double  read SetPreçoUnitario write getPreçoUnitario;
+  property ValorTotal    : Integer read SetValorTotal    write GetValorTotal;
+  property NomeProduto   : String  read SetNome          write GetNome;
+end;
+  implementation
+
+
+{ TPedido }
+
+uses sysutils;
+
+procedure TPedido.GetNome(const Value: String);
+begin
+  NomeProduto := Value;
+end;
+
+
+procedure TPedido.getPreçoUnitario(const Value: Double);
+begin
+  PreçoUnitario := PreçoUnitario*quantidade;
+end;
+
+procedure TPedido.getQtd(const Value: Integer);
+begin
+  quantidade := value;
+end;
+
+
+procedure TPedido.GetValorTotal(const Value: Integer);
+begin
+
+  if (Fquantidade >11) and (Fquantidade <50) then
+   ValorTotal := (PreçoUnitario + quantidade) * 0.9;
+
+
+
+end;
+
+
+function TPedido.SetNome: String;
+begin
+  Result := NomeProduto;
+end;
+
+function TPedido.SetPreçoUnitario: Double;
+begin
+  Result := PreçoUnitario;
+end;
+
+function TPedido.setQtd: Integer;
+begin
+  result := Quantidade;
+end;
+
+function TPedido.SetValorTotal: Integer;
+begin
+  Result := ValorTotal;
+end;
+
+end.

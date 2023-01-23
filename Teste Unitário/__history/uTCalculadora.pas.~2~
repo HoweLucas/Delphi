@@ -1,0 +1,42 @@
+unit uTCalculadora;
+
+interface
+
+type
+
+   TCalculadora = class
+
+private
+
+public
+   function opSomar(aNum1, aNum2: Double): Double;
+   function opSubtrair(aNum1, aNum2: Double): Double;
+   function opMultiplicar(aNum1, aNum2: Double): Double;
+   function opDividir(aNum1, aNum2: Double): Double;
+
+ end;
+implementation
+
+{ TCalculadora }
+
+function TCalculadora.opDividir(aNum1, aNum2: Double): Double;
+begin
+  opDividir := aNum1 / aNum2;
+end;
+
+function TCalculadora.opMultiplicar(aNum1, aNum2: Double): Double;
+begin
+  opMultiplicar := aNum1 * aNum2;
+end;
+
+function TCalculadora.opSomar(aNum1, aNum2: Double): Double;
+begin
+  opSomar := aNum1 + aNum2;
+end;
+
+function TCalculadora.opSubtrair(aNum1, aNum2: Double): Double;
+begin
+  opSubtrair := aNum1 - aNum2;
+end;
+
+end.

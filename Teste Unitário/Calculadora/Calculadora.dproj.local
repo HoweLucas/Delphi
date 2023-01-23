@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:34:06.000.379,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/16 18:32:24.000.266,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/16 18:32:51.000.438,C:\Users\mysql\Documents\Teste Unitário\uCalculadora.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/16 18:32:51.000.438,C:\Users\mysql\Documents\Teste Unitário\uCalculadora.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/01/16 18:32:56.000.302,C:\Users\mysql\Documents\Teste Unitário\Claculadora.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/01/16 18:40:47.000.210,=C:\Users\mysql\Documents\Teste Unitário\Unit1.pas</Transaction>
+    <Transaction>2023/01/16 18:46:39.000.542,C:\Users\mysql\Documents\Teste Unitário\uTCalculadora.pas=C:\Users\mysql\Documents\Teste Unitário\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 19:17:21.026,C:\Users\mysql\Documents\Teste Unitário\Calculadora\Calculadora.dproj=C:\Users\mysql\Documents\Teste Unitário\Calculadora\Claculadora.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

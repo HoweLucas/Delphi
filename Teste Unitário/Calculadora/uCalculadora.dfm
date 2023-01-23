@@ -1,0 +1,103 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 316
+  ClientWidth = 212
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 16
+    Top = 16
+    Width = 65
+    Height = 16
+    Caption = 'N'#250'mero 1 :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Top = 88
+    Width = 65
+    Height = 16
+    Caption = 'N'#250'mero 2 :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Top = 160
+    Width = 64
+    Height = 16
+    Caption = 'Opera'#231#227'o :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Resultado: TLabel
+    Left = 16
+    Top = 280
+    Width = 82
+    Height = 19
+    Caption = 'Resultado'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object edtNumero1: TEdit
+    Left = 16
+    Top = 48
+    Width = 177
+    Height = 21
+    TabOrder = 0
+  end
+  object edtNumero2: TEdit
+    Left = 16
+    Top = 120
+    Width = 177
+    Height = 21
+    TabOrder = 1
+  end
+  object ComboBox1: TComboBox
+    Left = 16
+    Top = 192
+    Width = 177
+    Height = 21
+    TabOrder = 2
+    Items.Strings = (
+      'Somar'
+      'Subtrair'
+      'Multiplicar'
+      'Dividie')
+  end
+  object Button1: TButton
+    Left = 16
+    Top = 232
+    Width = 177
+    Height = 33
+    Caption = 'Button1'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+end

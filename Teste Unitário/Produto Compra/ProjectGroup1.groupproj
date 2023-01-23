@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{06151C08-3A81-41C7-97D9-29872C40CE50}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ProdutoCompra.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\ProdutoCompraTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProdutoCompra">
+        <MSBuild Projects="ProdutoCompra.dproj"/>
+    </Target>
+    <Target Name="ProdutoCompra:Clean">
+        <MSBuild Projects="ProdutoCompra.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProdutoCompra:Make">
+        <MSBuild Projects="ProdutoCompra.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ProdutoCompraTests">
+        <MSBuild Projects="Test\ProdutoCompraTests.dproj"/>
+    </Target>
+    <Target Name="ProdutoCompraTests:Clean">
+        <MSBuild Projects="Test\ProdutoCompraTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProdutoCompraTests:Make">
+        <MSBuild Projects="Test\ProdutoCompraTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProdutoCompra;ProdutoCompraTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProdutoCompra:Clean;ProdutoCompraTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProdutoCompra:Make;ProdutoCompraTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
