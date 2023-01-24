@@ -1,0 +1,51 @@
+unit UCalculatorService;
+
+interface
+
+uses
+ UCalculadoraServiceDefault;
+
+Type
+  Toperacao =(opSomar, opSubtrair, opMultiplicar, opDividir);
+  TCalculatorService = class(ICalculadoraService)
+   FNum1: Double;
+   FNum2: Double;
+  private
+  public
+    function Calculo(aCalc: Toperacao) : Double;
+  end;
+
+implementation
+
+{ TCalculatorService }
+
+Uses
+ System.SysUtils, System.Classes,Vcl.Dialogs, System.Variants;
+
+
+{ TCalculatorService }
+
+function TCalculatorService.Calculo(aCalc: TOperacao): Double;
+var
+  xCalculo: ICalculadoraService;
+begin
+  xCalculo:= ICalculadoraService.create;
+
+  case aCalc of
+  opsomar:
+   Result :=
+   FloatToStr(xCalculo.Somar(StrToFloat(FNum1),(StrToFloat(FNum2)));
+
+  opSubtrair:
+   Result:=
+   FloatToStr(xCalculo.Subtrair(StrToFloat(FNum1),(StrToFloat(FNum2)));
+
+
+
+  end;
+end;
+
+{ TCalculatorService }
+
+
+end.

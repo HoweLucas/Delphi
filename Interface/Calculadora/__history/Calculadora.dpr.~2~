@@ -1,0 +1,16 @@
+program Calculadora;
+
+uses
+  Vcl.Forms,
+  ufrmPrincipal in 'ufrmPrincipal.pas' {Form1},
+  UCalculadoraService in 'Services\UCalculadoraService.pas',
+  UCalculadoraServiceDefault in 'Services\UCalculadoraServiceDefault.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:34:06.000.379,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 20:52:01.000.092,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 19:45:21.000.893,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 19:45:40.000.480,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/23 19:47:19.000.538,C:\Users\mysql\Documents\Interface\Calculadora\Services\UCalculadoraService.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/01/23 19:47:34.000.629,C:\Users\mysql\Documents\Interface\Calculadora\ufrmPrincipal.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/01/23 19:47:34.000.629,C:\Users\mysql\Documents\Interface\Calculadora\ufrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 19:47:46.000.464,C:\Users\mysql\Documents\Interface\Calculadora\Calculadora.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/01/23 19:57:08.000.717,=C:\Users\mysql\Documents\Interface\Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 20:06:59.000.729,C:\Users\mysql\Documents\Interface\Calculadora\Unit1.pas=C:\Users\mysql\Documents\Interface\Calculadora\Services\UCalculadoraServiceDefault.pas</Transaction>
+    <Transaction>2023/01/23 20:31:50.261,=C:\Users\mysql\Documents\Interface\Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 20:32:49.141,C:\Users\mysql\Documents\Interface\Calculadora\Services\TCalculadoraServiceDefault.pas=C:\Users\mysql\Documents\Interface\Calculadora\Services\UCalculadoraService.pas</Transaction>
+    <Transaction>2023/01/23 20:33:00.662,C:\Users\mysql\Documents\Interface\Calculadora\Services\ICalculadoraService.pas=C:\Users\mysql\Documents\Interface\Calculadora\Services\UCalculadoraServiceDefault.pas</Transaction>
+    <Transaction>2023/01/23 20:33:40.232,C:\Users\mysql\Documents\Interface\Calculadora\Services\UCalculatorService.pas=C:\Users\mysql\Documents\Interface\Calculadora\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 20:33:57.618,C:\Users\mysql\Documents\Interface\Calculadora\Services\UCalculadoraServiceDefault.pas=C:\Users\mysql\Documents\Interface\Calculadora\Services\TCalculadoraServiceDefault.pas</Transaction>
+    <Transaction>2023/01/23 20:34:06.439,C:\Users\mysql\Documents\Interface\Calculadora\Services\UCalculadoraService.pas=C:\Users\mysql\Documents\Interface\Calculadora\Services\ICalculadoraService.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Services"/>
+    <File Path="Services\UCalculadoraService.pas"/>
+    <File Path="Services\UCalculadoraServiceDefault.pas"/>
+    <File Path="Services\UCalculatorService.pas"/>
+    <File Path="ufrmPrincipal.pas"/>
+    <File Path="ufrmPrincipal.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

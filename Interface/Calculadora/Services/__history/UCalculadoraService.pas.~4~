@@ -1,0 +1,48 @@
+unit UCalculadoraService;
+
+interface
+
+uses
+  UCalculadoraServiceDefault;
+
+
+type
+ ICalculadoraService = class(TInterfacedObject, ICalculadoraServiceDefault)
+   private
+   public
+   function Somar(Const aNum1, aNum2: Double): Double;
+   function Subtrair(const aNum1, aNum2: Double): Double;
+   function Multiplicar(const aNum1, aNum2: Double): Double;
+   function Dividir(const aNum1, aNum2: Double): Double;
+
+  end;
+
+implementation
+
+
+{ TCaluladoraService }
+
+
+{ ICalculadoraService }
+
+function ICalculadoraService.Dividir(const aNum1, aNum2: Double): Double;
+begin
+  Dividir := aNum1 / aNum2;
+end;
+
+function ICalculadoraService.Multiplicar(const aNum1, aNum2: Double): Double;
+begin
+  Multiplicar := aNum1 * aNum2;
+end;
+
+function ICalculadoraService.Somar(const aNum1, aNum2: Double): Double;
+begin
+  Somar := aNum1 + aNum2;
+end;
+
+function ICalculadoraService.Subtrair(const aNum1, aNum2: Double): Double;
+begin
+  Subtrair := aNum1 - aNum2;
+end;
+
+end.

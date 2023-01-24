@@ -1,0 +1,29 @@
+unit UCalculatorService;
+
+interface
+
+Type
+  TCalculatorService = class
+  private
+  public
+    function Calculo(const aNum1, aNum2: Double): Double;
+  end;
+
+implementation
+
+{ TCalculatorService }
+
+Uses
+ System.SysUtils, System.Classes, UCalculadoraServiceDefault;
+
+function TCalculatorService.Calculo(const aNum1, aNum2: Double): Double;
+var
+  xCalculadora: ICalculadoraService;
+begin
+  xCalculadora := ICalculadoraService.Create;
+
+
+
+end;
+
+end.

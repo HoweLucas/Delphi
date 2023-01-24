@@ -1,0 +1,22 @@
+unit UCalculadoraService;
+
+interface
+
+uses
+  UCalculadoraServiceDefault;
+
+
+type
+ ICalculadoraService = class(TInterfacedObject, ICalculadoraServiceDefault)
+   private
+   public
+
+  end;
+
+implementation
+
+
+{ TCaluladoraService }
+
+
+end.

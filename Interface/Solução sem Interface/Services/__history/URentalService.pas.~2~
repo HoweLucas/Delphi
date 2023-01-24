@@ -1,0 +1,14 @@
+unit URentalService;
+
+
+interface
+
+uses
+  UBrazilTaxService, UCarRental;
+
+type
+ TRentalService = class
+
+implementation
+
+end.

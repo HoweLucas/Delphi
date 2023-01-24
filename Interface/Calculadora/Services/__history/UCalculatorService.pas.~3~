@@ -1,0 +1,37 @@
+unit UCalculatorService;
+
+interface
+
+uses
+ UCalculadoraServiceDefault;
+
+Type
+  Toperacao =(opSomar, opSubtrair, opMultiplicar, opDividir);
+  TCalculatorService = class
+   FNum1: Double;
+   FNum2: Double;
+  private
+  public
+    function ProcessCalc(aCalc: Toperacao) : Double;
+  end;
+
+implementation
+
+{ TCalculatorService }
+
+Uses
+ System.SysUtils, System.Classes;
+
+
+
+{ TCalculatorService }
+
+function TCalculatorService.ProcessCalc(aCalc: TOperacao): Double;
+begin
+
+end;
+
+{ TCalculatorService }
+
+
+end.
