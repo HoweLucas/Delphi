@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:34:06.000.379,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 20:52:01.000.092,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:15:25.000.696,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:16:03.000.273,C:\Users\mysql\Documents\Padrões de Projeto\Sem Abstract Factory\ufrmPrincipal.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:16:03.000.273,C:\Users\mysql\Documents\Padrões de Projeto\Sem Abstract Factory\ufrmPrincipal.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/01/24 19:16:23.000.038,C:\Users\mysql\Documents\Padrões de Projeto\Sem Abstract Factory\SemAbstractFactory.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/01/24 19:35:00.000.324,C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\SemAbstractFactory.dproj=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\ComAbstractFactory.dproj</Transaction>
+    <Transaction>2023/01/24 19:35:40.000.462,=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:35:56.000.132,C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Pattern\Factory\UInterfaces.pas</Transaction>
+    <Transaction>2023/01/24 19:38:57.000.716,=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:39:12.000.181,C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Pattern\Factory\UDell.pas</Transaction>
+    <Transaction>2023/01/24 19:39:19.000.664,=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:39:33.000.328,C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Pattern\Factory\UApple.pas</Transaction>
+    <Transaction>2023/01/24 19:39:37.000.895,=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:39:56.000.667,C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Pattern\Entities\UVostro.pas</Transaction>
+    <Transaction>2023/01/24 19:40:00.000.585,=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:40:10.000.367,C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Pattern\Entities\UMacBook.pas</Transaction>
+    <Transaction>2023/01/24 19:40:13.000.345,=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:40:31.000.705,C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Pattern\Entities\UInspiron.pas</Transaction>
+    <Transaction>2023/01/24 19:40:35.000.810,=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas</Transaction>
+    <Transaction>2023/01/24 19:40:49.000.973,C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Com Abstract Factory\Pattern\Entities\UImac.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,19 @@
+program ComAbstractFactory;
+
+uses
+  Vcl.Forms,
+  ufrmPrincipal in 'ufrmPrincipal.pas' {Form1},
+  UInterfaces in 'Pattern\Factory\UInterfaces.pas',
+  UDell in 'Pattern\Factory\UDell.pas',
+  UApple in 'Pattern\Factory\UApple.pas',
+  UVostro in 'Pattern\Entities\UVostro.pas',
+  UMacBook in 'Pattern\Entities\UMacBook.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.
