@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:34:06.000.379,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 20:52:01.000.092,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 20:47:57.033,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 20:52:38.870,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Adapter.pas=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 20:52:38.870,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Adapter.dfm=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/01/25 20:52:50.264,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\ufrmPrincipal.dproj=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/01/25 20:56:20.352,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Pattern\UWebServiceCorreios.pas</Transaction>
+    <Transaction>2023/01/25 20:56:37.830,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 20:58:20.684,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Pattern\UInterfaceViaCEP.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 21:00:24.405,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 21:00:43.158,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Pattern\UAdaptee.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 21:00:46.350,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 21:00:58.418,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Pattern\UAdapter.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 21:01:02.004,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 21:01:13.182,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Pattern\UTarget.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 21:01:19.102,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 21:01:51.356,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Pattern\UWebServiceViaCEP.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Unit1.pas</Transaction>
+    <Transaction>2023/01/25 21:31:05.959,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\UfrmPrincipal.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Adapter.pas</Transaction>
+    <Transaction>2023/01/25 21:31:05.959,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\UfrmPrincipal.dfm=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Adapter.dfm</Transaction>
+    <Transaction>2023/01/25 21:31:11.524,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\Adapter.dproj=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\adapter\ufrmPrincipal.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

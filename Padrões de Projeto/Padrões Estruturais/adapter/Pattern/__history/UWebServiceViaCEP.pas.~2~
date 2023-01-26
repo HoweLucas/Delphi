@@ -1,0 +1,15 @@
+unit UWebServiceViaCEP;
+
+interface
+
+uses
+  UInterfaceViaCEP;
+
+type
+  TWebServiceViaCEP = Class(TInterfacedObject, UInterfaceViaCEP)
+
+  End;
+
+implementation
+
+end.

@@ -1,0 +1,28 @@
+unit UImac;
+
+interface
+
+Uses
+  UInterfaces;
+
+Type
+  TImac = Class(TInterfacedObject, Idesktop)
+    function BuscarNomeProcessador : String;
+    function BuscarNomeTamanhoHD   : String;
+  End;
+
+implementation
+
+{ TImac }
+
+function TImac.BuscarNomeProcessador: String;
+begin
+  Result := 'Intel Core i7';
+end;
+
+function TImac.BuscarNomeTamanhoHD: String;
+begin
+  Result := '500 GB';
+end;
+
+end.

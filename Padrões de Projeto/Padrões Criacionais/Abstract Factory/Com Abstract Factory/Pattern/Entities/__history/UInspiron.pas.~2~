@@ -1,0 +1,14 @@
+unit UInspiron;
+
+interface
+
+Uses
+  Uinterfaces;
+
+Type
+  TInspiron = Class(TInterfacedObject, )
+
+
+implementation
+
+end.

@@ -1,0 +1,19 @@
+program ufrmPrincipal;
+
+uses
+  Vcl.Forms,
+  Adapter in 'Adapter.pas' {Form1},
+  UWebServiceCorreios in 'Pattern\UWebServiceCorreios.pas',
+  UInterfaceViaCEP in 'Pattern\UInterfaceViaCEP.pas',
+  UAdaptee in 'Pattern\UAdaptee.pas',
+  UAdapter in 'Pattern\UAdapter.pas',
+  UTarget in 'Pattern\UTarget.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.
