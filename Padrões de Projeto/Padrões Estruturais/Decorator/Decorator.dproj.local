@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:34:06.000.379,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 20:52:01.000.092,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:46:51.000.382,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:47:08.000.368,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\ufrmPrincipal.pas</Transaction>
+    <Transaction>2023/01/27 19:47:08.000.368,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\ufrmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/27 19:47:14.000.710,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Decorator.dproj</Transaction>
+    <Transaction>2023/01/27 19:47:44.000.512,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:48:41.000.814,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Pattern\Decorator\UInterfaceComponent.pas</Transaction>
+    <Transaction>2023/01/27 19:48:46.000.663,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:48:59.000.023,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Pattern\Decorator\UDecorator.pas</Transaction>
+    <Transaction>2023/01/27 19:49:05.000.432,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:50:37.000.657,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:51:02.000.210,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Pattern\Decorator\UConcreteDecorator_Windows.pas</Transaction>
+    <Transaction>2023/01/27 19:51:05.000.078,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:51:26.000.991,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Pattern\Decorator\UConcreteDecorator_Usuario.pas</Transaction>
+    <Transaction>2023/01/27 19:51:30.000.332,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:51:50.000.486,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Pattern\Decorator\UConcreteDecorator_DataHora.pas</Transaction>
+    <Transaction>2023/01/27 19:51:59.000.090,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas</Transaction>
+    <Transaction>2023/01/27 19:52:17.000.612,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Estruturais\Decorator\Pattern\Decorator\UConcreteComponent.pas</Transaction>
+  </Transactions>
+</BorlandProject>

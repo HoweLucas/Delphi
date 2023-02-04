@@ -1,0 +1,18 @@
+program Observer;
+
+uses
+  Vcl.Forms,
+  ufrmPrincipal in 'ufrmPrincipal.pas' {Form1},
+  UObserver in 'pattern\UObserver.pas',
+  UNotificacao in 'pattern\UNotificacao.pas',
+  UConcreteSubject in 'pattern\UConcreteSubject.pas',
+  Usubject in 'pattern\Usubject.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

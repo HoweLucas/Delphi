@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:34:06.000.379,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 20:52:01.000.092,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:23:03.000.805,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:23:21.000.484,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\ufrmPrincipal.pas</Transaction>
+    <Transaction>2023/01/30 20:23:21.000.484,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\ufrmPrincipal.dfm</Transaction>
+    <Transaction>2023/01/30 20:23:28.000.671,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Observer.dproj</Transaction>
+    <Transaction>2023/01/30 20:23:32.000.831,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:26:20.000.549,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern]\USubject.pas</Transaction>
+    <Transaction>2023/01/30 20:26:30.000.438,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:26:41.000.322,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UObserver.pas</Transaction>
+    <Transaction>2023/01/30 20:26:49.000.557,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:27:02.000.404,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UNotificacao.pas</Transaction>
+    <Transaction>2023/01/30 20:27:17.000.534,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:27:45.000.668,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteSubject.pas</Transaction>
+    <Transaction>2023/01/30 20:30:09.000.300,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:31:08.000.937,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\Usubject.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:31:25.000.899,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:32:07.000.698,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteSubject.pas=</Transaction>
+    <Transaction>2023/01/30 20:34:39.000.969,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:35:13.000.536,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteObserver_Log.dfm=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.dfm</Transaction>
+    <Transaction>2023/01/30 20:35:13.000.536,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteObserver_Log.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:53:35.000.881,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 20:54:12.000.172,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteObserver_Saldo.dfm=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.dfm</Transaction>
+    <Transaction>2023/01/30 20:54:12.000.172,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteObserver_Saldo.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 21:12:25.000.717,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteObserver_Saldo.dfm=</Transaction>
+    <Transaction>2023/01/30 21:12:34.000.238,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 21:19:33.000.067,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.dfm=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteObserver_Saldo.dfm</Transaction>
+    <Transaction>2023/01/30 21:19:33.000.067,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteObserver_Saldo.pas</Transaction>
+    <Transaction>2023/01/30 21:22:43.000.428,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit2.pas</Transaction>
+    <Transaction>2023/01/30 21:32:00.000.957,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit2.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteObserver_Historico.pas</Transaction>
+    <Transaction>2023/01/30 21:32:00.000.958,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit2.dfm=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteObserver_Historico.dfm</Transaction>
+    <Transaction>2023/01/30 21:41:13.000.985,=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas</Transaction>
+    <Transaction>2023/01/30 21:55:27.000.009,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.dfm=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteSubject.dfm</Transaction>
+    <Transaction>2023/01/30 21:55:27.000.009,C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\Unit1.pas=C:\Users\mysql\Documents\Padrões de Projeto\Padrões Comportamentais\Observer\pattern\UConcreteSubject.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="52ad27e8-702d-404c-a161-2d10a8f61446" activeEnvironment="Default" name="Calculadora" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="8577baa9-7cd8-456c-a9e3-c1a4d9dc13c6" wsaVersion="NONE" name="ICalculadorabinding" type="wsdl" bindingName="{http://tempuri.org/}ICalculadorabinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:9090/wsdl/ICalculadora" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:9090/wsdl/ICalculadora"><con:part><con:url>http://localhost:9090/wsdl/ICalculadora</con:url><con:content><![CDATA[<definitions name="ICalculadoraservice" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/">
+  <message name="Somar0Request">
+    <part name="anum1" type="xs:double"/>
+    <part name="anum2" type="xs:double"/>
+  </message>
+  <message name="Somar0Response">
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="Subtracao1Request">
+    <part name="aNum1" type="xs:double"/>
+    <part name="aNum2" type="xs:double"/>
+  </message>
+  <message name="Subtracao1Response">
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="Multiplicacao2Request">
+    <part name="aNum1" type="xs:double"/>
+    <part name="aNum2" type="xs:double"/>
+  </message>
+  <message name="Multiplicacao2Response">
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="Dividir3Request">
+    <part name="aNum1" type="xs:double"/>
+    <part name="aNum2" type="xs:double"/>
+  </message>
+  <message name="Dividir3Response">
+    <part name="return" type="xs:double"/>
+  </message>
+  <portType name="ICalculadora">
+    <operation name="Somar">
+      <input message="tns:Somar0Request"/>
+      <output message="tns:Somar0Response"/>
+    </operation>
+    <operation name="Subtracao">
+      <input message="tns:Subtracao1Request"/>
+      <output message="tns:Subtracao1Response"/>
+    </operation>
+    <operation name="Multiplicacao">
+      <input message="tns:Multiplicacao2Request"/>
+      <output message="tns:Multiplicacao2Response"/>
+    </operation>
+    <operation name="Dividir">
+      <input message="tns:Dividir3Request"/>
+      <output message="tns:Dividir3Response"/>
+    </operation>
+  </portType>
+  <binding name="ICalculadorabinding" type="tns:ICalculadora">
+    <binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <operation name="Somar">
+      <operation soapAction="urn:CalculadoraIntf-ICalculadora#Somar" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CalculadoraIntf-ICalculadora" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CalculadoraIntf-ICalculadora" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="Subtracao">
+      <operation soapAction="urn:CalculadoraIntf-ICalculadora#Subtracao" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CalculadoraIntf-ICalculadora" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CalculadoraIntf-ICalculadora" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="Multiplicacao">
+      <operation soapAction="urn:CalculadoraIntf-ICalculadora#Multiplicacao" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CalculadoraIntf-ICalculadora" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CalculadoraIntf-ICalculadora" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="Dividir">
+      <operation soapAction="urn:CalculadoraIntf-ICalculadora#Dividir" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CalculadoraIntf-ICalculadora" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CalculadoraIntf-ICalculadora" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="ICalculadoraservice">
+    <port name="ICalculadoraPort" binding="tns:ICalculadorabinding">
+      <address location="http://localhost:9090/soap/ICalculadora" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:9090/soap/ICalculadora</con:endpoint></con:endpoints><con:operation id="d0fd138f-f03f-4fa5-9543-9ebad64f9cd4" isOneWay="false" action="urn:CalculadoraIntf-ICalculadora#Dividir" name="Dividir" bindingOperationName="Dividir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1be05115-502f-40e2-9711-1f4395c699f7" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/soap/ICalculadora</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:CalculadoraIntf-ICalculadora">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:Dividir soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <aNum1 xsi:type="xsd:double">10</aNum1>\r
+         <aNum2 xsi:type="xsd:double">0</aNum2>\r
+      </urn:Dividir>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:CalculadoraIntf-ICalculadora#Dividir"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="4167699c-b17a-4452-9f31-ccd4c72761a4" isOneWay="false" action="urn:CalculadoraIntf-ICalculadora#Multiplicacao" name="Multiplicacao" bindingOperationName="Multiplicacao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="faeef860-fd6a-412a-952e-e228d0f54bba" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/soap/ICalculadora</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:CalculadoraIntf-ICalculadora">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:Multiplicacao soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <aNum1 xsi:type="xsd:double">0</aNum1>\r
+         <aNum2 xsi:type="xsd:double">5</aNum2>\r
+      </urn:Multiplicacao>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:CalculadoraIntf-ICalculadora#Multiplicacao"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="3f7641ee-f4f2-4921-83b9-9cb4431080d3" isOneWay="false" action="urn:CalculadoraIntf-ICalculadora#Somar" name="Somar" bindingOperationName="Somar" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="61844daf-ff53-4e30-bbb5-a0c69a6938e2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/soap/ICalculadora</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:CalculadoraIntf-ICalculadora">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:Somar soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <anum1 xsi:type="xsd:double">5</anum1>\r
+         <anum2 xsi:type="xsd:double">5</anum2>\r
+      </urn:Somar>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:CalculadoraIntf-ICalculadora#Somar"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2176a326-2def-4d23-8bba-5dabb9f85d87" isOneWay="false" action="urn:CalculadoraIntf-ICalculadora#Subtracao" name="Subtracao" bindingOperationName="Subtracao" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="083c7f9c-7f56-4d94-9a98-1f8e94edb920" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/soap/ICalculadora</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:CalculadoraIntf-ICalculadora">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:Subtracao soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <aNum1 xsi:type="xsd:double">6</aNum1>\r
+         <aNum2 xsi:type="xsd:double">510</aNum2>\r
+      </urn:Subtracao>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:CalculadoraIntf-ICalculadora#Subtracao"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

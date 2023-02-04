@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4e5d005e-f76f-4382-bf84-a4495c6609af" activeEnvironment="Default" name="IHello_World" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="fa7b79a4-ac40-400b-ae0e-712ecbb9c820" wsaVersion="NONE" name="IHello_Worldbinding" type="wsdl" bindingName="{http://tempuri.org/}IHello_Worldbinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:9090/wsdl/IHello_World" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:9090/wsdl/IHello_World"><con:part><con:url>http://localhost:9090/wsdl/IHello_World</con:url><con:content><![CDATA[<definitions name="IHello_Worldservice" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns1="urn:Hello_WorldIntf">
+  <types>
+    <xs:schema targetNamespace="urn:Hello_WorldIntf" xmlns="urn:Hello_WorldIntf">
+      <xs:simpleType name="TEnumTest">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="etNone"/>
+          <xs:enumeration value="etAFew"/>
+          <xs:enumeration value="etSome"/>
+          <xs:enumeration value="etAlot"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="TDoubleArray">
+        <xs:complexContent>
+          <xs:restriction base="soapenc:Array">
+            <sequence xmlns="http://www.w3.org/2001/XMLSchema"/>
+            <xs:attribute ref="soapenc:arrayType" n1:arrayType="xs:double[]" xmlns:n1="http://schemas.xmlsoap.org/wsdl/"/>
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="TMyEmployee">
+        <sequence xmlns="http://www.w3.org/2001/XMLSchema">
+          <xs:element name="LastName" type="xs:string"/>
+          <xs:element name="FirstName" type="xs:string"/>
+          <xs:element name="Salary" type="xs:double"/>
+        </sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="echoEnum0Request">
+    <part name="Value" type="ns1:TEnumTest"/>
+  </message>
+  <message name="echoEnum0Response">
+    <part name="return" type="ns1:TEnumTest"/>
+  </message>
+  <message name="echoDoubleArray1Request">
+    <part name="Value" type="ns1:TDoubleArray"/>
+  </message>
+  <message name="echoDoubleArray1Response">
+    <part name="return" type="ns1:TDoubleArray"/>
+  </message>
+  <message name="echoMyEmployee2Request">
+    <part name="Value" type="ns1:TMyEmployee"/>
+  </message>
+  <message name="echoMyEmployee2Response">
+    <part name="return" type="ns1:TMyEmployee"/>
+  </message>
+  <message name="echoDouble3Request">
+    <part name="Value" type="xs:double"/>
+  </message>
+  <message name="echoDouble3Response">
+    <part name="return" type="xs:double"/>
+  </message>
+  <message name="echoHelloWorld4Request"/>
+  <message name="echoHelloWorld4Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <portType name="IHello_World">
+    <operation name="echoEnum">
+      <input message="tns:echoEnum0Request"/>
+      <output message="tns:echoEnum0Response"/>
+    </operation>
+    <operation name="echoDoubleArray">
+      <input message="tns:echoDoubleArray1Request"/>
+      <output message="tns:echoDoubleArray1Response"/>
+    </operation>
+    <operation name="echoMyEmployee">
+      <input message="tns:echoMyEmployee2Request"/>
+      <output message="tns:echoMyEmployee2Response"/>
+    </operation>
+    <operation name="echoDouble">
+      <input message="tns:echoDouble3Request"/>
+      <output message="tns:echoDouble3Response"/>
+    </operation>
+    <operation name="echoHelloWorld">
+      <input message="tns:echoHelloWorld4Request"/>
+      <output message="tns:echoHelloWorld4Response"/>
+    </operation>
+  </portType>
+  <binding name="IHello_Worldbinding" type="tns:IHello_World">
+    <binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <operation name="echoEnum">
+      <operation soapAction="urn:Hello_WorldIntf-IHello_World#echoEnum" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="echoDoubleArray">
+      <operation soapAction="urn:Hello_WorldIntf-IHello_World#echoDoubleArray" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="echoMyEmployee">
+      <operation soapAction="urn:Hello_WorldIntf-IHello_World#echoMyEmployee" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="echoDouble">
+      <operation soapAction="urn:Hello_WorldIntf-IHello_World#echoDouble" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="echoHelloWorld">
+      <operation soapAction="urn:Hello_WorldIntf-IHello_World#echoHelloWorld" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:Hello_WorldIntf-IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="IHello_Worldservice">
+    <port name="IHello_WorldPort" binding="tns:IHello_Worldbinding">
+      <address location="http://localhost:9090/soap/IHello_World" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:9090/soap/IHello_World</con:endpoint></con:endpoints><con:operation id="1969cf4b-8277-4b15-9fa3-01c74e17a934" isOneWay="false" action="urn:Hello_WorldIntf-IHello_World#echoDouble" name="echoDouble" bindingOperationName="echoDouble" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="42300d8e-0b06-4332-b624-f457280e4e83" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/soap/IHello_World</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Hello_WorldIntf-IHello_World">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:echoDouble soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <Value xsi:type="xsd:double">10.75</Value>\r
+      </urn:echoDouble>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Hello_WorldIntf-IHello_World#echoDouble"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="5b66c1ca-6fe1-4d66-8a1c-28ce8ffd053a" isOneWay="false" action="urn:Hello_WorldIntf-IHello_World#echoDoubleArray" name="echoDoubleArray" bindingOperationName="echoDoubleArray" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6b34796d-d356-44d4-96fe-dd6ef3efbd34" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/soap/IHello_World</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Hello_WorldIntf-IHello_World" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:echoDoubleArray soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <Value xsi:type="urn:TDoubleArray" soapenc:arrayType="xsd:double[]" xmlns:urn="urn:Hello_WorldIntf"/>\r
+      </urn:echoDoubleArray>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Hello_WorldIntf-IHello_World#echoDoubleArray"/></con:call></con:operation><con:operation id="eb5c97f2-5c78-423b-8e97-af7d664ffe9e" isOneWay="false" action="urn:Hello_WorldIntf-IHello_World#echoEnum" name="echoEnum" bindingOperationName="echoEnum" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="14df936c-0628-49ae-81f6-6cea9f0ee8bc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/soap/IHello_World</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Hello_WorldIntf-IHello_World">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:echoEnum soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <Value xsi:type="urn:TEnumTest" xmlns:urn="urn:Hello_WorldIntf">?</Value>\r
+      </urn:echoEnum>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Hello_WorldIntf-IHello_World#echoEnum"/></con:call></con:operation><con:operation id="b2b2e005-17ae-42f3-af70-214ec1f80a17" isOneWay="false" action="urn:Hello_WorldIntf-IHello_World#echoMyEmployee" name="echoMyEmployee" bindingOperationName="echoMyEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3ea7e6e0-8cc2-4f44-a302-ef2864cb2169" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/soap/IHello_World</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Hello_WorldIntf-IHello_World">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:echoMyEmployee soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">\r
+         <Value xsi:type="urn:TMyEmployee" xmlns:urn="urn:Hello_WorldIntf">\r
+            <LastName xsi:type="xsd:string">?</LastName>\r
+            <FirstName xsi:type="xsd:string">?</FirstName>\r
+            <Salary xsi:type="xsd:double">?</Salary>\r
+         </Value>\r
+      </urn:echoMyEmployee>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Hello_WorldIntf-IHello_World#echoMyEmployee"/></con:call></con:operation><con:operation id="5e97dc09-799b-4fbc-96ed-11adee552bc4" isOneWay="false" action="urn:Hello_WorldIntf-IHello_World#echoHelloWorld" name="echoHelloWorld" bindingOperationName="echoHelloWorld" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f234f03c-1b3e-4f95-964a-2bfd65658fb8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:9090/soap/IHello_World</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:Hello_WorldIntf-IHello_World">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:echoHelloWorld soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:Hello_WorldIntf-IHello_World#echoHelloWorld"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

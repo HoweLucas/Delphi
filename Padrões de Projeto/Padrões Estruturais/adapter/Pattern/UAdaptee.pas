@@ -2,12 +2,12 @@ unit UAdaptee;
 
 interface
 
-Uses UWebServiceViaCEP, System.Classes;
+Uses UWebServiceCorreios, UWebServiceViaCEP, System.Classes, Soap.SOAPHTTPClient, System.SysUtils;
 
 type
   TWEbServiceCorreios = class
     private
-      FParametros: ConsultarCEP;
+      FParametros: ConsultaCEP;
       FResposta: enderecoERP;
 
       procedure BeforeExcute(const aMethodName: String; aSOAPRequest: TStream);
@@ -21,8 +21,6 @@ type
 implementation
 
 { TWEbServiceCorreios }
-
-uses Soap.SOAPHTTPClient, System.SysUtils;
 
 procedure TWEbServiceCorreios.BeforeExcute(const aMethodName: String;
   aSOAPRequest: TStream);
@@ -42,7 +40,7 @@ begin
       '</soapenv:Envelope>';
 
     aSOAPRequest.Position := 0;
-    aSOAPRequest.Size := Lenght(xRequest.Text);
+    aSOAPRequest.Size := Length(xRequest.Text);
     xRequest.SaveToStream(aSOAPRequest);
   finally
     FreeAndNil(xRequest);
@@ -51,24 +49,40 @@ begin
 end;
 
 procedure TWEbServiceCorreios.ConsultarCEP;
+var
+  xCorreios: AtendeCliente;
+  xHTTPRIO : THTTPRIO;
 begin
+  xHTTPRIO := THTTPRIO.Create(nil);
+  xHTTPRIO.OnBeforeExecute := Self.BeforeExcute;
 
+  xCorreios := GetAtendeCliente(True, '', xHTTPRIO);
+  FResposta := xCorreios.consultaCEP(FParametros).return;
 end;
 
 procedure TWEbServiceCorreios.DefinirParametrosConsultar(const aCep: String);
 begin
-
+  FParametros := ConsultaCEP.create;
+  FParametros.CEP :=aCEP;
 end;
 
 destructor TWEbServiceCorreios.Destroy;
 begin
-
+  FreeAndNil(Fparametros);
+  FreeAndNil(FResposta);
   inherited;
 end;
 
 function TWEbServiceCorreios.ObterResposta(const aInformacao: String): String;
 begin
+  result := EmptyStr;
 
+  if aInformacao = 'Logradouro' then
+    Result := FResposta.end_
+  else if aInformacao = 'Bairro' then
+    Result := FResposta.bairro
+  else if aInformacao = 'Cidade' then
+    Result := FResposta.cidade;
 end;
 
 end.

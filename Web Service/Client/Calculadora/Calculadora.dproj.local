@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:34:06.000.379,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 20:52:01.000.092,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/03 19:39:40.000.675,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/03 19:44:14.000.479,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/02/03 19:47:29.000.848,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\ICalculadora1.pas</Transaction>
+    <Transaction>2023/02/03 20:14:03.000.943,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\mysql\Documents\Web Service\Client\Calculadora\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2023/02/03 20:14:03.000.943,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\mysql\Documents\Web Service\Client\Calculadora\UfrmPrincipal.pas</Transaction>
+    <Transaction>2023/02/03 20:14:05.000.842,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\ICalculadora1.pas=C:\Users\mysql\Documents\Web Service\Client\Calculadora\ICalculadora1.pas</Transaction>
+    <Transaction>2023/02/03 20:14:11.000.268,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mysql\Documents\Web Service\Client\Calculadora\Calculadora.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

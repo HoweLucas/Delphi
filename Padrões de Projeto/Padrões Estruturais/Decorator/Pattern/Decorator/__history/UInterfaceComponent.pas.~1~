@@ -1,0 +1,12 @@
+unit UInterfaceComponent;
+
+interface
+
+type
+  iLogExecao = interface
+   function ObterDadosExcecao: string;
+  end;
+
+implementation
+
+end.

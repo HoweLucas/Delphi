@@ -16,6 +16,7 @@ type
     lblBairro: TLabel;
     lblCidade: TLabel;
     procedure btnConsultarClick(Sender: TObject);
+    procedure button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,7 +29,7 @@ var
 implementation
 
 uses
-  UTarget, UWebServiceViaCEP, UInterfaceViaCEP;
+  UTarget, UWebServiceViaCEP, UInterfaceViaCEP, UAdaptee, UAdapter;
 
 {$R *.dfm}
 
@@ -56,6 +57,38 @@ begin
     FreeAndNil(xRetorno);
     FreeAndNil(xComunicador);
   end;
+end;
+
+procedure TForm1.button1Click(Sender: TObject);
+var
+xWebServiceCorreios: TWebServiceCorreios;
+xAdapter: IWebServiceViaCep;
+xComunicador: TComunicador;
+xRetorno: TStringList;
+begin
+  //Instancia o objeto de consulta dos correios (adaptee)
+  xWebServiceCorreios := TWebServiceCorreios.Create;
+
+  //Instacia o adaptador (adapter)
+  xAdapter := Tadapter.Create(xWebServiceCorreios);
+
+  //instancia o comunicador (Target), injetando o adaptador
+  xComunicador := TComunicador.Create(xAdapter);
+
+  xRetorno := TStringList.Create;
+  try
+    //O Target consulta o endereço (utilizando o objeto injetado) e retorna os dados
+    xRetorno := xComunicador.ConsultarEndereco(edtCEP.Text);
+
+    lblLogradouro.Caption := xRetorno.Values['Logradouro'];
+    lblBairro.Caption     := xRetorno.Values['Bairro'];
+    lblCidade.Caption     := xRetorno.Values['Cidade'];
+  finally
+    FreeAndNil(xRetorno);
+    FreeAndNIl(xComunicador);
+    FreeAndNil(xWebServiceCorreios);
+  end;
+
 end;
 
 end.

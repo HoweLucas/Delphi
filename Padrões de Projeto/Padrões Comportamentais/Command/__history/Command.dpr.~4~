@@ -1,0 +1,17 @@
+program Command;
+
+uses
+  Vcl.Forms,
+  ufrmPrincipal in 'ufrmPrincipal.pas' {Form1},
+  UCommand in 'Pattern\UCommand.pas',
+  UConcreteCommand in 'Pattern\UConcreteCommand.pas',
+  UInvoker in 'Pattern\UInvoker.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

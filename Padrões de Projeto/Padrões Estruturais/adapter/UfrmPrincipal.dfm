@@ -82,5 +82,6 @@ object Form1: TForm1
     Height = 25
     Caption = 'Consultar Correios'
     TabOrder = 2
+    OnClick = button1Click
   end
 end

@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8A410C93-871D-4FAD-86AE-CB3560E0C328}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Adapter.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\..\Padrões criacionais\FactoryMethod\FactoryMethod.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Adapter">
+        <MSBuild Projects="Adapter.dproj"/>
+    </Target>
+    <Target Name="Adapter:Clean">
+        <MSBuild Projects="Adapter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Adapter:Make">
+        <MSBuild Projects="Adapter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FactoryMethod">
+        <MSBuild Projects="..\..\Padrões criacionais\FactoryMethod\FactoryMethod.dproj"/>
+    </Target>
+    <Target Name="FactoryMethod:Clean">
+        <MSBuild Projects="..\..\Padrões criacionais\FactoryMethod\FactoryMethod.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FactoryMethod:Make">
+        <MSBuild Projects="..\..\Padrões criacionais\FactoryMethod\FactoryMethod.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Adapter;FactoryMethod"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Adapter:Clean;FactoryMethod:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Adapter:Make;FactoryMethod:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

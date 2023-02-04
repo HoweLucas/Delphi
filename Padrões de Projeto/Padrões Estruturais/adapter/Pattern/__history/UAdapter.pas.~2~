@@ -1,0 +1,50 @@
+unit UAdapter;
+
+interface
+
+uses
+  UInterfaceViaCep, UAdaptee;
+
+type
+  TAdapter = class(TInterfacedObject, IWebServiceViaCep)
+  private
+    FWebServiceCorreios: TWebServiceCorreios;
+  public
+    constructor Create(aWebServiceCorreios: TwebServiceCorreios);
+    procedure ConsultarEnderecoWebService(const aCep: String);
+    function ObterLogradouro: String;
+    function ObterBairro: String;
+    function ObterCidade: String;
+  end;
+
+implementation
+
+{ TAdapter }
+
+procedure TAdapter.ConsultarEnderecoWebService(const aCep: String);
+begin
+  FWebServiceCorreios.DefinirParametrosConsultar(aCep);
+  FWebServiceCorreios.ConsultarCEP;
+end;
+
+constructor TAdapter.Create(aWebServiceCorreios: TwebServiceCorreios);
+begin
+
+end;
+
+function TAdapter.ObterBairro: String;
+begin
+
+end;
+
+function TAdapter.ObterCidade: String;
+begin
+
+end;
+
+function TAdapter.ObterLogradouro: String;
+begin
+
+end;
+
+end.

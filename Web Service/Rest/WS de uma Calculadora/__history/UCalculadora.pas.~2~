@@ -1,0 +1,43 @@
+unit UCalculadora;
+
+interface
+
+uses UICalculadora;
+
+type
+  TCalculadora = class(TInterfacedObject, ICalculadora)
+    private
+
+    public
+
+    function Somar (const Valor1, Valor2: Double): Double;
+    function Subtrair(const Valor1, Valor2: Double): Double;
+    function Multiplicar(const Valor1, Valor2: Double): Double;
+    function Dividir (const Valor1, Valor2: Double): Double;
+  end;
+
+implementation
+
+{ TCalculadora }
+
+function TCalculadora.Dividir(const Valor1, Valor2: Double): Double;
+begin
+  Dividir := Valor1 / Valor2
+end;
+
+function TCalculadora.Multiplicar(const Valor1, Valor2: Double): Double;
+begin
+  Multiplicar := Valor1 * Valor2
+end;
+
+function TCalculadora.Somar(const Valor1, Valor2: Double): Double;
+begin
+  Somar := Valor1 + Valor2
+end;
+
+function TCalculadora.Subtrair(const Valor1, Valor2: Double): Double;
+begin
+  Subtrair := Valor1 - Valor2;
+end;
+
+end.

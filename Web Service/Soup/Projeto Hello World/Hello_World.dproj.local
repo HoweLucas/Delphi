@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/01/12 21:34:06.000.379,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/20 20:52:01.000.092,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/02/01 19:28:39.000.599,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:28:45.000.996,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2023/02/01 19:29:25.000.916,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Hello_WorldImpl.pas</Transaction>
+    <Transaction>2023/02/01 19:29:26.000.151,=C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Hello_WorldIntf.pas</Transaction>
+    <Transaction>2023/02/01 20:07:35.000.270,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Hello_WorldImpl.pas=C:\Users\mysql\Documents\Soup\Projeto Hello World\Hello_WorldImpl.pas</Transaction>
+    <Transaction>2023/02/01 20:07:38.000.929,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Hello_WorldIntf.pas=C:\Users\mysql\Documents\Soup\Projeto Hello World\Hello_WorldIntf.pas</Transaction>
+    <Transaction>2023/02/01 20:07:47.000.534,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\FormUnit1.pas=C:\Users\mysql\Documents\Soup\Projeto Hello World\FormUnit1.pas</Transaction>
+    <Transaction>2023/02/01 20:07:47.000.534,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\FormUnit1.dfm=C:\Users\mysql\Documents\Soup\Projeto Hello World\FormUnit1.dfm</Transaction>
+    <Transaction>2023/02/01 20:07:50.000.091,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas=C:\Users\mysql\Documents\Soup\Projeto Hello World\WebModuleUnit1.pas</Transaction>
+    <Transaction>2023/02/01 20:07:50.000.091,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.dfm=C:\Users\mysql\Documents\Soup\Projeto Hello World\WebModuleUnit1.dfm</Transaction>
+    <Transaction>2023/02/01 20:08:03.000.924,C:\Users\mysql\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\mysql\Documents\Soup\Projeto Hello World\Hello_World.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

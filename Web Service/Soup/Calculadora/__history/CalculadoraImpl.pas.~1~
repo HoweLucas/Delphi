@@ -1,0 +1,53 @@
+{ Invokable implementation File for TCalculadora which implements ICalculadora }
+
+unit CalculadoraImpl;
+
+interface
+
+uses Soap.InvokeRegistry, System.Types, Soap.XSBuiltIns, CalculadoraIntf, Vcl.Dialogs,
+sysUtils;
+
+type
+
+  { TCalculadora }
+  TCalculadora = class(TInvokableClass, ICalculadora)
+  public
+    function Somar(const anum1,anum2: Double): Double;
+    function Subtracao(const aNum1, aNum2: Double): Double;
+    function Multiplicacao(const aNum1, aNum2: Double): Double;
+    function Dividir(const aNum1,aNum2: Double): Double;
+  end;
+
+implementation
+
+
+
+{ TCalculadora }
+
+function TCalculadora.Dividir(const aNum1, aNum2: Double): Double;
+begin
+  if aNum2 = 0 then
+    raise Exception.Create('Não é possivel dividir por zero');
+    Dividir := aNum1/aNum2;
+end;
+
+function TCalculadora.Multiplicacao(const aNum1, aNum2: Double): Double;
+begin
+  Multiplicacao := aNum1 * aNum2;
+end;
+
+function TCalculadora.Somar(const anum1, anum2: Double): Double;
+begin
+  Somar := aNum1 + aNum2;
+end;
+
+function TCalculadora.Subtracao(const aNum1, aNum2: Double): Double;
+begin
+  subtracao := aNum1 - aNum2;
+end;
+
+initialization
+{ Invokable classes must be registered }
+   InvRegistry.RegisterInvokableClass(TCalculadora);
+end.
+

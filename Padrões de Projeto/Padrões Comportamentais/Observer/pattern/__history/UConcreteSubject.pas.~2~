@@ -1,0 +1,80 @@
+unit UConcreteSubject;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Datasnap.DBClient, Vcl.StdCtrls, Vcl.ExtCtrls, Usubject, UObserver,
+  Generics.Collections;
+
+type
+  TfraCadastro = class(TFrame, Isubject)
+    Label1: TLabel;
+    cmbOperacao: TComboBox;
+    label2: TLabel;
+    cmbCategoria: TComboBox;
+    Label3: TLabel;
+    edtValor: TEdit;
+    btnGravar: TButton;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    ClientDataSet1: TClientDataSet;
+    ClientDataSet1Operacao: TStringField;
+    ClientDataSet1Categoria: TStringField;
+    ClientDataSet1Valor: TCurrencyField;
+    Shape1: TShape;
+  private
+    { Private declarations }
+    FObservers: TList<IObserver>;
+    procedure Notificar;
+    procedure CarregarCategorias;
+  public
+    { Public declarations }
+    constructor Create(AOwner: TComponent); Override;
+    destructor destroy; override;
+
+    procedure AdicionarObserver(aObserver: IObserver);
+    procedure RemoverObserver(aObserver: IObserver);
+  end;
+
+implementation
+
+{$R *.dfm}
+
+
+{ TfraCadastro }
+
+procedure TfraCadastro.AdicionarObserver(aObserver: IObserver);
+begin
+
+end;
+
+procedure TfraCadastro.CarregarCategorias;
+begin
+
+end;
+
+constructor TfraCadastro.Create(AOwner: TComponent);
+begin
+  inherited;
+
+end;
+
+destructor TfraCadastro.destroy;
+begin
+
+  inherited;
+end;
+
+procedure TfraCadastro.Notificar;
+begin
+
+end;
+
+procedure TfraCadastro.RemoverObserver(aObserver: IObserver);
+begin
+
+end;
+
+end.

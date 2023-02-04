@@ -1,0 +1,35 @@
+unit UConcreteCommand;
+
+interface
+
+uses
+  UCommand, UReceiver;
+
+type
+  { Concrete Command}
+  TProcessos = class(TInterfacedObject, Icommand)
+  private
+    // Variáveis para armazenar a referência do Receiver
+    FReceiver: TReceiver;
+  public
+    constructor Create(aReceiver: TReceiver);
+
+    // Assinatura da Interface - método de execução da operação
+    procedure Execute;
+  end;
+
+implementation
+
+{ TProcessos }
+
+constructor TProcessos.Create(aReceiver: TReceiver);
+begin
+
+end;
+
+procedure TProcessos.Execute;
+begin
+
+end;
+
+end.

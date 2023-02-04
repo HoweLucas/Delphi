@@ -1,0 +1,98 @@
+object fraSaldo: TfraSaldo
+  Left = 0
+  Top = 0
+  Width = 320
+  Height = 119
+  TabOrder = 0
+  object Label1: TLabel
+    Left = 96
+    Top = 3
+    Width = 107
+    Height = 16
+    Caption = 'Balan'#231'o Financeiro'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Top = 40
+    Width = 46
+    Height = 16
+    Caption = 'Cr'#233'dito:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblCreditos: TLabel
+    Left = 248
+    Top = 42
+    Width = 25
+    Height = 16
+    Caption = '0,00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clGreen
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 16
+    Top = 62
+    Width = 41
+    Height = 16
+    Caption = 'D'#233'bito:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblDebitos: TLabel
+    Left = 248
+    Top = 64
+    Width = 25
+    Height = 16
+    Caption = '0,00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 16
+    Top = 84
+    Width = 37
+    Height = 16
+    Caption = 'Saldo:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clPurple
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblSaldo: TLabel
+    Left = 248
+    Top = 86
+    Width = 25
+    Height = 16
+    Caption = '0,00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clPurple
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+end
