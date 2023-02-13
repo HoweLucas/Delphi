@@ -1,0 +1,30 @@
+unit UFuncionarios;
+
+interface
+
+type
+  TFuncionario = class
+private
+  FNome          : String;
+  FSobrenome     : String;
+  FSalarioMensal : Double;
+public
+  Constructor Create(ANome, ASobrenome: string; ASalario: Double);
+
+
+end;
+
+implementation
+
+
+{ TFuncionario }
+
+constructor TFuncionario.Create(ANome, ASobrenome: string; ASalario: Double);
+begin
+  FNome := A
+end;
+
+end.
+
+
+

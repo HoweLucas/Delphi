@@ -1,0 +1,44 @@
+unit UFuncionarios;
+
+interface
+
+type
+  TFuncionario = class
+  private
+    FNome: string;
+    FSobrenome: string;
+    FSalario: Double;
+  public
+    constructor Create(ANome, ASobrenome: string; ASalario: Double);
+    property   Nome: string read FNome write FNome;
+    property Sobrenome: string read FSobrenome write FSobrenome;
+    property Salario: Double read FSalario write FSalario;
+  end;
+
+implementation
+
+
+{ TFuncionario }
+constructor TFuncionario.Create(ANome, ASobrenome: string; ASalario: Double);
+begin
+  FNome := ANome;
+  FSobrenome := ASobrenome;
+  FSalario := ASalario;
+end;
+
+var
+  Funcionario1: TFuncionario;
+  Funcionario2: TFuncionario;
+begin
+  Funcionario1 := TFuncionario.Create('João', 'Silva', 3000);
+  Funcionario2 := TFuncionario.Create('Maria', 'Souza', 3500);
+
+  Writeln('Nome: ', Funcionario1.Nome, ' ', Funcionario1.Sobrenome);
+  Writeln('Salário: R$ ', Funcionario1.Salario:0:2);
+  Writeln('');
+  Writeln('Nome: ', Funcionario2.Nome, ' ', Funcionario2.Sobrenome);
+  Writeln('Salário: R$ ', Funcionario2.Salario:0:2);
+end.
+
+
+

@@ -1,0 +1,47 @@
+unit UfrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TEnum  = (UFuncionario1,   UFuncionario2);
+  TForm1 = class(TForm)
+    Button1: TButton;
+    ComboBox1: TComboBox;
+    Label1: TLabel;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses
+  UFuncionarios;
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  Funcionario1: TFuncionario;
+  Funcionario2: TFuncionario;
+begin
+  Funcionario1 := TFuncionario.Create('João', 'Silva', 3000);
+  Funcionario2 := TFuncionario.Create('Maria', 'Souza', 3500);
+
+  Writeln('Nome: ', Funcionario1.Nome, ' ', Funcionario1.Sobrenome);
+  Writeln('Salário: R$ ', Funcionario1.Salario:0:2);
+  Writeln('');
+  Writeln('Nome: ', Funcionario2.Nome, ' ', Funcionario2.Sobrenome);
+  Writeln('Salário: R$ ', Funcionario2.Salario:0:2);
+end;
+end.
