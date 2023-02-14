@@ -59,17 +59,17 @@ end;
 
 procedure TFuncionario.SetNome(const Value: String);
 begin
-  FNome := value;
+  FNome := Nome;
 end;
 
 procedure TFuncionario.SetSalarioMensal(const Value: Double);
 begin
-  FSalarioMensal := value;
+  FSalarioMensal := SalarioMensal;
 end;
 
 procedure TFuncionario.SetSobreNome(const Value: String);
 begin
-  FSobreNome := value;
+  FSobreNome := SobreNome;
 end;
 
 end.

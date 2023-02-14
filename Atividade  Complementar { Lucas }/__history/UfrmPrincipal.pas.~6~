@@ -37,18 +37,15 @@ begin
   xFuncionario1 := TFuncionario.Create('Lucas',' Howe ',1500);
   xFuncionario2 := TFuncionario.Create('João', ' da Silca', 2000);
 
-  Try
-    case TEnum(cmbFuncionario.items) of
-    UFuncionario1:
-      mmResultado.Lines.Add(xFuncionario1.Nome + xFuncionario1.SobreNome + FloatToStr(xFuncionario1.SalarioMensal));
+  case TEnum(cmbFuncionario.items) of
+  UFuncionario1:
+   mmResultado.Lines.Add(xFuncionario1.Nome + xFuncionario1.SobreNome + FloatToStr(xFuncionario1.SalarioMensal));
 
-    UFuncionario2:
-      mmResultado.Lines.Add(xFuncionario2.Nome + xFuncionario2.SobreNome + FloatToStr(xFuncionario2.SalarioMensal));
+  UFuncionario2:
+   mmResultado.Lines.Add(xFuncionario2.Nome + xFuncionario2.SobreNome + FloatToStr(xFuncionario2.SalarioMensal));
    end;
 
-  Finally
-    FreeAndNil(xFuncionario1);
-    FreeAndNil(xFuncionario2);
-  End;
-  end;
+  FreeAndNil(xFuncionario1);
+  FreeAndNil(xFuncionario2);
+ end;
 end.

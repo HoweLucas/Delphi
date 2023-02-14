@@ -3,9 +3,9 @@
 	<Transactions>
     <Transaction>2023/02/11 15:36:45.000.070,=D:\Delphi CE\Unit1.pas</Transaction>
     <Transaction>2023/02/11 15:54:10.000.818,=D:\Delphi CE\Unit2.pas</Transaction>
-    <Transaction>2023/02/11 15:56:25.000.914,D:\Delphi CE\Unit1.pas=D:\Delphi\Atividade  Complementar { Lucas }\UfrmPrincipal.pas</Transaction>
-    <Transaction>2023/02/11 15:56:25.000.914,D:\Delphi CE\Unit1.dfm=D:\Delphi\Atividade  Complementar { Lucas }\UfrmPrincipal.dfm</Transaction>
-    <Transaction>2023/02/11 15:56:38.000.068,D:\Delphi CE\Unit2.pas=D:\Delphi\Atividade  Complementar { Lucas }\Classe\UFuncionarios.pas</Transaction>
-    <Transaction>2023/02/11 15:57:16.000.382,D:\Delphi CE\Project1.dproj=D:\Delphi\Atividade  Complementar { Lucas }\Funcionario.dproj</Transaction>
+    <Transaction>2023/02/11 15:56:25.000.914,D:\Delphi\Atividade  Complementar { Lucas }\UfrmPrincipal.dfm=D:\Delphi CE\Unit1.dfm</Transaction>
+    <Transaction>2023/02/11 15:56:25.000.914,D:\Delphi\Atividade  Complementar { Lucas }\UfrmPrincipal.pas=D:\Delphi CE\Unit1.pas</Transaction>
+    <Transaction>2023/02/11 15:56:38.000.068,D:\Delphi\Atividade  Complementar { Lucas }\Classe\UFuncionarios.pas=D:\Delphi CE\Unit2.pas</Transaction>
+    <Transaction>2023/02/11 15:57:16.000.382,D:\Delphi\Atividade  Complementar { Lucas }\Funcionario.dproj=D:\Delphi CE\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
