@@ -1,0 +1,34 @@
+unit UfrmMatch.Registry;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FMX.ListView, FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.Layouts;
+
+type
+  TframatchRegistry = class(TFrame)
+    lytPrincipal: TLayout;
+    imgLogo: TImage;
+    lytBotoes: TLayout;
+    rectTimeB: TRectangle;
+    edtResultTimeB: TEdit;
+    rectTimeA: TRectangle;
+    edtResultTeamA: TEdit;
+    rectSalvar: TRectangle;
+    Label2: TLabel;
+    lblX: TLabel;
+    lstPartidas: TListView;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+{$R *.fmx}
+
+end.

@@ -1,0 +1,140 @@
+unit UfraBets;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FMX.Controls.Presentation, FMX.ListView, FMX.Objects, FMX.Layouts,
+  uEntity.Bets;
+
+type
+  TFraBet = class(TFrame)
+    rectPrincipal: TRectangle;
+    lytPrincipal: TLayout;
+    imgLogo: TImage;
+    lstPalpites: TListView;
+    RectToolBar: TRectangle;
+    lytPartida: TLayout;
+    rectExcluir: TRectangle;
+    Label1: TLabel;
+    rectNovo: TRectangle;
+    Label2: TLabel;
+    procedure rectExcluirClick(Sender: TObject);
+    procedure rectNovoClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure CarregarRegistro;
+    procedure AbrirBetRegistry;
+    procedure PrepararListView(aBet: TBet);
+    procedure ExcluirRegistro;
+  public
+    { Public declarations }
+    Constructor Create(aOwner: TComponent); override;
+  end;
+
+var
+  fraBet: TfraBet;
+
+implementation
+
+{$R *.fmx}
+
+uses
+   UService.Intf,
+   UService.Bet,
+   Uservice.Match,
+   Ufrabets.Registry,
+   UService.User.Authenticated, UEntity.Matchs;
+
+
+{ TFraBet }
+
+procedure TFraBet.AbrirBetRegistry;
+begin
+  if not Assigned(FraBetRegistry) then;
+    FraBetRegistry := TfraBetRegistry.Create(Application);
+
+  FraBetRegistry.Align := TAlignLayout.Center;
+  Self.Parent.AddObject(FraBetRegistry);
+  FreeAndNil(FraBet);
+end;
+
+procedure TFraBet.CarregarRegistro;
+var
+  xServiceBet: Iservice;
+  xBet: TBet;
+begin
+  lstpalpites.Items.Clear;
+
+  xServiceBet := TServiceBet.Create;
+  xServiceBet.Listar;
+  for xBet in TServiceBet(xServiceBet).Bets do
+     Self.PrepararListView(xBet);
+end;
+
+constructor TFraBet.Create(aOwner: TComponent);
+begin
+  inherited create(aOwner);
+  Self.CarregarRegistro;
+end;
+
+procedure TFraBet.ExcluirRegistro;
+var
+  xServiceBet: IService;
+  xBet: TBet;
+  xItem: TListViewItem;
+  xUserAuthenticated: TUserAuthenticated;
+begin
+  if lstPalpites.ItemIndex = -1 then
+    exit;
+
+  xItem := lstPalpites.Items[lstPalpites.ItemIndex];
+
+  xUserAuthenticated := TUserAuthenticated.GetInstance;
+  if xItem.TagString <> xUserAuthenticated.User.Id.ToString then
+    raise Exception.Create('Não é possível excluir o palpite de outro usuário.');
+
+  xBet := TBet.Create(xItem.Tag);
+
+  xServiceBet :=  TServiceBet.Create(xBet);
+  try
+    xServiceBet.Excluir;
+    ShowMessage('Registro Excluido.');
+  finally
+    Self.CarregarRegistro;
+  end;
+
+end;
+
+procedure TFraBet.PrepararListView(aBet: TBet);
+var
+  xItem: TListViewItem;
+  xMatch: TMatch;
+begin
+  xItem           := lstpalpites.Items.Add;
+  xItem.Tag       := aBet.Id;
+  xItem.TagString := aBet.User.Id.ToString;
+  xMatch          := aBet.Match;
+
+  TListItemText(xItem.Objects.FindDrawable('txtUsuario')).Text := aBet.User.Login;
+  TListItemText(xItem.Objects.FindDrawable('txtHora')).Text := TimeToStr(xMatch.Hour);
+  TListItemText(xItem.Objects.FindDrawable('txtData')).Text := DateToStr(xMatch.date);
+  TListItemText(xItem.Objects.FindDrawable('txtTimeA')).Text := xMatch.TeamA.Name;
+  TListItemText(xItem.Objects.FindDrawable('txtTimeB')).Text := xMatch.TeamB.Name;
+  TListItemText(xItem.Objects.FindDrawable('txtResultadoTimeA')).Text := aBet.ResultTeamA.ToString;
+  TListItemText(xItem.Objects.FindDrawable('txtResultadoTimeB')).Text := aBet.ResultTeamB.ToString;
+  end;
+
+procedure TFraBet.rectExcluirClick(Sender: TObject);
+begin
+  Self.ExcluirRegistro;
+end;
+
+procedure TFraBet.rectNovoClick(Sender: TObject);
+begin
+  Self.AbrirBetRegistry;
+end;
+
+end.

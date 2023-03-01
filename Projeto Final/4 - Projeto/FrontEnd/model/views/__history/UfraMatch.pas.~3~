@@ -1,0 +1,77 @@
+unit UfraMatch;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FMX.Controls.Presentation, FMX.ListView, FMX.Objects, FMX.Layouts, UEntity.Matchs;
+
+type
+  TfraMatch = class(TFrame)
+    rectPrincipal: TRectangle;
+    lytPrincipal: TLayout;
+    imgLogo: TImage;
+    lytPartida: TLayout;
+    lstPalpites: TListView;
+    RectToolBar: TRectangle;
+    rectExcluir: TRectangle;
+    Label1: TLabel;
+    rectNovo: TRectangle;
+    Label2: TLabel;
+  private
+    { Private declarations }
+    procedure CarregarRegistros;
+    procedure AbrirMatchsRegistry;
+    procedure PrepararListView(aMatch: TMatch);
+    procedure ExcluirRegistro;
+  public
+    { Public declarations }
+    constructor Create(aOwner: TComponent); override;
+  end;
+
+var
+  fraMatch: TfraMatch;
+
+implementation
+
+{$R *.fmx}
+
+Uses
+   UfraMatch.Registry,
+   Uservice.Intf,
+   Uservice.Match;
+
+{ TfraMatch }
+
+procedure TfraMatch.AbrirMatchsRegistry;
+begin
+  if not Assigned(FraMatchRegistry) then
+
+
+
+end;
+
+procedure TfraMatch.CarregarRegistros;
+begin
+
+end;
+
+constructor TfraMatch.Create(aOwner: TComponent);
+begin
+  inherited;
+
+end;
+
+procedure TfraMatch.ExcluirRegistro;
+begin
+
+end;
+
+procedure TfraMatch.PrepararListView(aMatch: TMatch);
+begin
+
+end;
+
+end.

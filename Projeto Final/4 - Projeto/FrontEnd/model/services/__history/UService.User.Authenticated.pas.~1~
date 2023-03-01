@@ -1,0 +1,7 @@
+unit UService.User.Authenticated;
+
+interface
+
+implementation
+
+end.

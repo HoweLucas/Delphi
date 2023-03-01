@@ -1,0 +1,35 @@
+unit UService.Bet;
+
+interface
+
+uses UService.Base, UEntity.Bets, UEntity.Matchs, UEntity.Users,
+     Generics.Collections;
+
+type
+  TServiceBet = class(TServiceBase)
+    private
+      FBet: TBet;
+      FBets: TObjectList<TBet>;
+
+      function GetBets: TObjectList<TBet>;
+
+      procedure PreencherBets(const aJsonBets: String);
+      procedure CarregarMatch(const aJsonMatch: String; var aMatch: TMatch);
+      procedure CarregarUser(const aJsonUser: String; var aUser: TUser);
+    public
+      constructor Create; overload;
+      constructor Create(aBet: TBet); overload;
+      destructor  Destroy; override;
+
+      procedure Registrar; override;
+      procedure Listar; override;
+      procedure Excluir; override;
+
+      function ObterRegistro(const aId: Integer): TObject; override;
+
+      property Bets: TObjectList<TBet> read GetBets;
+end;
+
+implementation
+
+end.

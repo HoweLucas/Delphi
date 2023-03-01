@@ -1,0 +1,33 @@
+unit UfraTeam;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Layouts, FMX.Objects, FMX.ListView.Types, FMX.ListView.Appearances,
+  FMX.ListView.Adapters.Base, FMX.Controls.Presentation, FMX.ListView;
+
+type
+  TfraTeams = class(TFrame)
+    rectPrincipal: TRectangle;
+    lytPrincipal: TLayout;
+    imgLogo: TImage;
+    lytPartida: TLayout;
+    lstPalpites: TListView;
+    RectToolBar: TRectangle;
+    rectExcluir: TRectangle;
+    Label1: TLabel;
+    rectNovo: TRectangle;
+    Label2: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+{$R *.fmx}
+
+end.

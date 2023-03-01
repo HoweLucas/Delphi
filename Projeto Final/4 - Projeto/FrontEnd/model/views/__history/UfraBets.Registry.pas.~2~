@@ -1,0 +1,80 @@
+unit UfraBets.Registry;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.Layouts, FMX.ListBox,
+  FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FMX.ListView,  UEntity.Matchs;
+
+type
+  TfraBetRegistry = class(TFrame)
+    rectPrincipal: TRectangle;
+    lytPrincipal: TLayout;
+    imgLogo: TImage;
+    lytBotoes: TLayout;
+    rectTimeB: TRectangle;
+    edtResultTimeB: TEdit;
+    rectTimeA: TRectangle;
+    edtResultTeamA: TEdit;
+    rectSalvar: TRectangle;
+    Label2: TLabel;
+    RectVoltar: TRectangle;
+    Label3: TLabel;
+    lblX: TLabel;
+    lstPartidas: TListView;
+  private
+    { Private declarations }
+    procedure VoltarTela;
+    procedure CarregarMatchs;
+    Procedure Registar;
+    procedure PreencherMatchs(const aMatchs: TMatch);
+  public
+    { Public declarations }
+    constructor Create(aOwner: TComponent); override;
+  end;
+
+var
+  fraBetRegistry: TFraBetRegistry;
+
+implementation
+
+{$R *.fmx}
+
+Uses
+   UfrmBets,
+   Uservice.Team,
+   UService.Match,
+   Uservice
+
+{ TfraBetRegistry }
+
+procedure TfraBetRegistry.CarregarMatchs;
+begin
+
+end;
+
+constructor TfraBetRegistry.Create(aOwner: TComponent);
+begin
+  inherited;
+
+end;
+
+procedure TfraBetRegistry.PreencherMatchs(const aMatchs: TMatch);
+begin
+
+end;
+
+procedure TfraBetRegistry.Registar;
+begin
+
+end;
+
+procedure TfraBetRegistry.VoltarTela;
+begin
+
+end;
+
+end.

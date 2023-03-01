@@ -1,0 +1,96 @@
+unit UService.Match;
+
+interface
+
+Uses
+  Uentity.Matchs,
+  UService.Base,
+  Generics.Collections;
+
+type
+  TServiceMatch = class(TServiceBase)
+    private
+      Fmatch: TMatch;
+      FMatchs: TObjectList<TMatch>;
+      function GetMatchs: TObjectList<TMatch>;
+
+      procedure PreencherMatchs(const ajsonMatchs: String);
+    Public
+      constructor Create; Overload;
+      constructor Create(aMatch: TMatch); overload;
+      destructor Destroy; override;
+
+      procedure Registrar; override;
+      procedure Listar; override;
+      procedure excluir; override;
+
+      function ObterRegistro(const aid: Integer): Tobject; override;
+
+      property Matchs: TObjectList<TMatch> read GetMatchs;
+end;
+implementation
+
+uses
+  System.SysUtils,
+  System.JSON, UUtils.constants,
+  DataSet.Serialize,
+  FireDAC.Comp.Client,
+  REST.Types;
+
+{ TServiceMatch }
+
+constructor TServiceMatch.Create;
+begin
+  inherited Create;
+
+  FMatchs := TObjectList<TMatch>.create;
+end;
+
+constructor TServiceMatch.Create(aMatch: TMatch);
+begin
+  FMatch := amatch;
+
+  Self.Create;
+end;
+
+destructor TServiceMatch.Destroy;
+begin
+  FreeAndNil(Fmatch);
+  FreeAndNil(Fmatchs);
+  inherited;
+end;
+
+procedure TServiceMatch.excluir;
+begin
+  inherited;
+
+end;
+
+function TServiceMatch.GetMatchs: TObjectList<TMatch>;
+begin
+
+end;
+
+procedure TServiceMatch.Listar;
+begin
+  inherited;
+
+end;
+
+function TServiceMatch.ObterRegistro(const aid: Integer): Tobject;
+begin
+
+end;
+
+procedure TServiceMatch.PreencherMatchs(const ajsonMatchs: String);
+begin
+
+end;
+
+procedure TServiceMatch.Registrar;
+begin
+  inherited;
+
+end;
+
+end.

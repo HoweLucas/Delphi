@@ -1,0 +1,33 @@
+unit UfraTeams.Registry;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Edit, FMX.Controls.Presentation, FMX.ListBox, FMX.Objects, FMX.Layouts;
+
+type
+  TFraTeamRegistry = class(TFrame)
+    RectPrincipal: TRectangle;
+    lytPrincipal: TLayout;
+    imgLogo: TImage;
+    lytBotoes: TLayout;
+    rectNome: TRectangle;
+    rectSalvar: TRectangle;
+    Label2: TLabel;
+    lblX: TLabel;
+    RectVoltar: TRectangle;
+    Label3: TLabel;
+    edtNome: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+{$R *.fmx}
+
+end.

@@ -1,0 +1,113 @@
+unit UfrmLogin.Authentication;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, FMX.Layouts, FMX.Edit;
+
+type
+  TfrmLoginAuthentication = class(TForm)
+    rectPrincipal: TRectangle;
+    lytPrincipal: TLayout;
+    imgLogo: TImage;
+    lytBotoes: TLayout;
+    rectLogin: TRectangle;
+    RectVoltar: TRectangle;
+    Label3: TLabel;
+    edtLogin: TEdit;
+    rectPassWord: TRectangle;
+    edtPassWord: TEdit;
+    rectEntrar: TRectangle;
+    Label2: TLabel;
+    procedure rectEntrarClick(Sender: TObject);
+    procedure RectVoltarClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+    procedure VoltarTela;
+    procedure AbirHome;
+    procedure Logar;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLoginAuthentication: TfrmLoginAuthentication;
+
+implementation
+
+{$R *.fmx}
+
+uses
+  UfrmLogin,
+ // UfrmHome,
+  UEntity.Logins;
+ // Uservice.Intf,
+ // uservice.Login;
+
+
+{ TfrmLoginAuthentication }
+
+procedure TfrmLoginAuthentication.AbirHome;
+begin
+  {if not Assigned(frmHome) then
+    frmHome := TfrmHome.create(application);
+
+  frmHome.show;
+  Application.MainForm := frmHome;
+  Self.Close; }
+end;
+
+procedure TfrmLoginAuthentication.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  Action := TCloseAction.caFree;
+  frmLoginAuthentication := nil;
+end;
+
+procedure TfrmLoginAuthentication.Logar;
+//var
+ // xServiceLogin: IService;
+begin
+ { if Trim(edtLogin.Text) = EmptyStr then
+    raise Exception.Create('Informe o Login. ');
+
+  if Trim(edtPassword.Text) = EmptyStr then
+    raise Exception.Create('Informe a Senha. ');
+
+  xServiceLogin := TServiceLogin.Create(
+    TLogin.Create(Trim(edtLogin.Text),
+                  Trim(edtPassword.Text)));
+
+  try
+    TServiceLogin(xServiceLogin).Autenticar;
+    Self.AbrirHome;
+  except
+    on e: exception do
+      raise Exception.Create('Login: ' + e.message);
+  end;}
+end;
+
+procedure TfrmLoginAuthentication.rectEntrarClick(Sender: TObject);
+begin
+  Self.Logar;
+end;
+
+procedure TfrmLoginAuthentication.RectVoltarClick(Sender: TObject);
+begin
+  Self.VoltarTela;
+end;
+
+procedure TfrmLoginAuthentication.VoltarTela;
+begin
+  if not Assigned(frmLogin) then
+    FrmLogin := TfrmLogin.Create(Application);
+
+  frmLogin.show;
+  Application.MainForm := frmLogin;
+  Self.Close;
+end;
+
+end.

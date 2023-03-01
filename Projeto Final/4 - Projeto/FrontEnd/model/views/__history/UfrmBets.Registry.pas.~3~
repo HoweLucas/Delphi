@@ -1,0 +1,40 @@
+unit UfrmBets.Registry;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.Layouts, FMX.ListBox,
+  FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FMX.ListView;
+
+type
+  TfraBetRegistry = class(TFrame)
+    rectPrincipal: TRectangle;
+    lytPrincipal: TLayout;
+    imgLogo: TImage;
+    lytBotoes: TLayout;
+    rectTimeB: TRectangle;
+    edtResultTimeB: TEdit;
+    rectTimeA: TRectangle;
+    edtResultTeamA: TEdit;
+    rectSalvar: TRectangle;
+    Label2: TLabel;
+    RectVoltar: TRectangle;
+    Label3: TLabel;
+    lblX: TLabel;
+    lstPartidas: TListView;
+    procedure FrameClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+{$R *.fmx}
+
+
+end.

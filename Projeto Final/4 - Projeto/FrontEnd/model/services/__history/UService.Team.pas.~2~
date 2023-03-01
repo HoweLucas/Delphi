@@ -1,0 +1,90 @@
+unit UService.Team;
+
+interface
+
+Uses
+  Uentity.Teams,
+  UService.Base,
+  Generics.Collections;
+
+type
+  TServiceTeam = class(TServiceBase)
+    private
+      FTeam: TTeam;
+      FTeams: TObjectList<TTeam>;
+      function GetTeams: TObjectList<TTeam>;
+
+    Public
+      constructor Create; Overload;
+      constructor Create(aTeam: TTeam); overload;
+      destructor Destroy; override;
+
+      procedure Registrar; override;
+      procedure Listar; override;
+      procedure excluir; override;
+
+      function ObterRegistro(const aid: Integer): Tobject; override;
+
+      property Teams: TObjectList<TTeam> read GetTeams;
+end;
+
+implementation
+
+uses
+  System.SysUtils,
+  System.JSON, UUtils.constants,
+  DataSet.Serialize,
+  FireDAC.Comp.Client,
+  REST.Types;
+
+{ TServiceTeam }
+
+constructor TServiceTeam.Create;
+begin
+  inherited Create;
+
+  FTeams := TObjectList<TTeam>.create;
+end;
+
+constructor TServiceTeam.Create(aTeam: TTeam);
+begin
+  FTeam := aTeam;
+
+  Self.Create;
+end;
+
+destructor TServiceTeam.Destroy;
+begin
+
+  inherited;
+end;
+
+procedure TServiceTeam.excluir;
+begin
+  inherited;
+
+end;
+
+function TServiceTeam.GetTeams: TObjectList<TTeam>;
+begin
+
+end;
+
+procedure TServiceTeam.Listar;
+begin
+  inherited;
+
+end;
+
+function TServiceTeam.ObterRegistro(const aid: Integer): Tobject;
+begin
+
+end;
+
+procedure TServiceTeam.Registrar;
+begin
+  inherited;
+
+end;
+
+end.
